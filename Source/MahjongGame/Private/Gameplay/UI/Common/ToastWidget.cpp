@@ -46,6 +46,28 @@ void UToastWidget::ShowToast(const FString& Message, EToastType Type, float Dura
     if (MessageText)
         MessageText->SetText(FText::FromString(Message));
 
+    // 根据类型设置背景纹理
+    if (ToastBackground)
+    {
+        switch (Type)
+        {
+            case EToastType::Success:
+                if (SuccessBackgroundTexture)
+                    ToastBackground->SetBrushFromTexture(SuccessBackgroundTexture);
+                break;
+            case EToastType::Warning:
+                if (WarningBackgroundTexture)
+                    ToastBackground->SetBrushFromTexture(WarningBackgroundTexture);
+                break;
+            case EToastType::Error:
+                if (ErrorBackgroundTexture)
+                    ToastBackground->SetBrushFromTexture(ErrorBackgroundTexture);
+                break;
+            default:
+                break;
+        }
+    }
+
     GetWorld()->GetTimerManager().ClearTimer(AutoHideTimerHandle);
     GetWorld()->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UToastWidget::OnAutoHideTimer, Duration, false);
 
@@ -55,4 +77,19 @@ void UToastWidget::ShowToast(const FString& Message, EToastType Type, float Dura
 void UToastWidget::OnAutoHideTimer()
 {
     HideToast();
+}
+
+void UToastWidget::SetSuccessBackground(UTexture2D* Texture)
+{
+    SuccessBackgroundTexture = Texture;
+}
+
+void UToastWidget::SetWarningBackground(UTexture2D* Texture)
+{
+    WarningBackgroundTexture = Texture;
+}
+
+void UToastWidget::SetErrorBackground(UTexture2D* Texture)
+{
+    ErrorBackgroundTexture = Texture;
 }

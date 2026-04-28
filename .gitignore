@@ -8,3 +8,9 @@ Saved/
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+
+; 本地配置文件（包含敏感信息）
+Config/DefaultGameSettings.ini
+
+; 音频资源
+Content/Audio/

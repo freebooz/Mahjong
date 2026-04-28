@@ -2,6 +2,7 @@
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "Components/CanvasPanel.h"
+#include "Gameplay/UI/Common/UISoundManager.h"
 
 UConfirmDialogWidget::UConfirmDialogWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -55,18 +56,21 @@ void UConfirmDialogWidget::SetCancelCallback(FOnCancelDelegate Callback)
 
 void UConfirmDialogWidget::OnConfirmClicked()
 {
+    UUISoundManager::PlayConfirmClick(this);
     ConfirmCallback.ExecuteIfBound();
     HideDialog();
 }
 
 void UConfirmDialogWidget::OnCancelClicked()
 {
+    UUISoundManager::PlayCancelClick(this);
     CancelCallback.ExecuteIfBound();
     HideDialog();
 }
 
 void UConfirmDialogWidget::OnBackgroundClicked()
 {
+    UUISoundManager::PlayCancelClick(this);
     CancelCallback.ExecuteIfBound();
     HideDialog();
 }

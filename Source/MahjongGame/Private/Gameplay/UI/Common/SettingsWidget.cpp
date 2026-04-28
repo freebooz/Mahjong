@@ -5,6 +5,7 @@
 #include "Components/CheckBox.h"
 #include "Components/CanvasPanel.h"
 #include "Components/VerticalBox.h"
+#include "Gameplay/UI/Common/UISoundManager.h"
 
 USettingsWidget::USettingsWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {
@@ -38,6 +39,7 @@ void USettingsWidget::HideSettings()
 
 void USettingsWidget::OnCloseClicked()
 {
+    UUISoundManager::PlayCancelClick(this);
     HideSettings();
 }
 
@@ -68,10 +70,12 @@ void USettingsWidget::OnVibrationChanged(bool bEnabled)
 
 void USettingsWidget::OnAccountClicked()
 {
+    UUISoundManager::PlayButtonClick(this);
     UE_LOG(LogTemp, Log, TEXT("[Settings] 账号设置"));
 }
 
 void USettingsWidget::OnAboutClicked()
 {
+    UUISoundManager::PlayButtonClick(this);
     UE_LOG(LogTemp, Log, TEXT("[Settings] 关于"));
 }

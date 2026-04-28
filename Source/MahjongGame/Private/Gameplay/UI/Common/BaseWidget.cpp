@@ -1,4 +1,6 @@
 #include "Gameplay/UI/Common/BaseWidget.h"
+#include "Components/Image.h"
+#include "Components/CanvasPanel.h"
 
 void UBaseWidget::Show()
 {
@@ -29,4 +31,33 @@ void UBaseWidget::PlayFadeOut(float Duration)
     if (Duration <= 0) Duration = 0.3f;
     OnFadeOutFinished();
     Hide();
+}
+
+void UBaseWidget::SetBackgroundTexture(UTexture2D* NewTexture)
+{
+    if (BackgroundImage && NewTexture)
+    {
+        BackgroundImage->SetBrushFromTexture(NewTexture);
+        BackgroundImage->SetVisibility(ESlateVisibility::Visible);
+    }
+}
+
+void UBaseWidget::SetBackgroundColor(FLinearColor NewColor)
+{
+    if (BackgroundImage)
+    {
+        FSlateBrush Brush = BackgroundImage->GetBrush();
+        Brush.TintColor = NewColor;
+        BackgroundImage->SetBrush(Brush);
+    }
+}
+
+void UBaseWidget::SetBackgroundOpacity(float Opacity)
+{
+    if (BackgroundImage)
+    {
+        FSlateBrush Brush = BackgroundImage->GetBrush();
+        Brush.TintColor.A = Opacity;
+        BackgroundImage->SetBrush(Brush);
+    }
 }

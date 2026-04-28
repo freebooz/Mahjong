@@ -9,6 +9,7 @@
 #include "Components/CanvasPanel.h"
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
+#include "Components/Image.h"
 #include "MahjongGameWidget.generated.h"
 
 //==============================================================================
@@ -68,6 +69,10 @@ public:
     UFUNCTION(BlueprintCallable, Category="Mahjong|Game")
     int32 GetSelfPlayerID() const;
 
+    // 设置牌桌背景纹理
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Game")
+    void SetTableBackground(UTexture2D* NewTexture);
+
 protected:
     // 界面构建完成
     virtual void NativeConstruct() override;
@@ -87,6 +92,10 @@ protected:
     // 根面板
     UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
     UCanvasPanel* RootCanvas;
+
+    // 牌桌背景纹理
+    UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+    UImage* TableBackgroundImage;
 
     // 玩家1信息（自己，下）
     UPROPERTY(BlueprintReadOnly, meta=(BindWidget))

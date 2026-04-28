@@ -50,6 +50,18 @@ public:
     UFUNCTION(BlueprintCallable, Category="Common|Toast")
     void HideToast();
 
+    // 设置成功背景纹理
+    UFUNCTION(BlueprintCallable, Category="Common|Toast")
+    void SetSuccessBackground(UTexture2D* Texture);
+
+    // 设置警告背景纹理
+    UFUNCTION(BlueprintCallable, Category="Common|Toast")
+    void SetWarningBackground(UTexture2D* Texture);
+
+    // 设置错误背景纹理
+    UFUNCTION(BlueprintCallable, Category="Common|Toast")
+    void SetErrorBackground(UTexture2D* Texture);
+
 protected:
     // 界面构建完成
     virtual void NativeConstruct() override;
@@ -76,10 +88,24 @@ protected:
     UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
     UImage* TypeIcon;
 
+    // 背景纹理（可选）
+    UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+    UImage* ToastBackground;
+
     // 当前 Toast 类型
     UPROPERTY()
     EToastType CurrentType;
 
     // 计时器句柄
     FTimerHandle AutoHideTimerHandle;
+
+    // 各类型背景纹理
+    UPROPERTY()
+    UTexture2D* SuccessBackgroundTexture;
+
+    UPROPERTY()
+    UTexture2D* WarningBackgroundTexture;
+
+    UPROPERTY()
+    UTexture2D* ErrorBackgroundTexture;
 };

@@ -1,6 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/Image.h"
+#include "Components/CanvasPanel.h"
 #include "BaseWidget.generated.h"
 
 //==============================================================================
@@ -33,6 +35,18 @@ public:
     UFUNCTION(BlueprintCallable, Category="Common|Base")
     void PlayFadeOut(float Duration = 0.3f);
 
+    // 设置背景纹理
+    UFUNCTION(BlueprintCallable, Category="Common|Base")
+    void SetBackgroundTexture(UTexture2D* NewTexture);
+
+    // 设置背景色调
+    UFUNCTION(BlueprintCallable, Category="Common|Base")
+    void SetBackgroundColor(FLinearColor NewColor);
+
+    // 设置背景透明度
+    UFUNCTION(BlueprintCallable, Category="Common|Base")
+    void SetBackgroundOpacity(float Opacity);
+
 protected:
     // 淡入完成回调
     UFUNCTION(BlueprintImplementableEvent, Category="Common|Base")
@@ -45,4 +59,12 @@ protected:
     // 是否正在显示
     UPROPERTY()
     bool bIsShowing;
+
+    // 背景纹理图片
+    UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+    UImage* BackgroundImage;
+
+    // 背景遮罩画布
+    UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+    UCanvasPanel* BackgroundOverlay;
 };
