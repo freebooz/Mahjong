@@ -1,0 +1,163 @@
+{
+  "AssetList": {
+    "Tiles": {
+      "Characters": {
+        "Count": 9,
+        "Files": ["W1.png", "W2.png", "W3.png", "W4.png", "W5.png", "W6.png", "W7.png", "W8.png", "W9.png"],
+        "TotalCount": 36
+      },
+      "Bamboos": {
+        "Count": 9,
+        "Files": ["D1.png", "D2.png", "D3.png", "D4.png", "D5.png", "D6.png", "D7.png", "D8.png", "D9.png"],
+        "TotalCount": 36
+      },
+      "Circles": {
+        "Count": 9,
+        "Files": ["T1.png", "T2.png", "T3.png", "T4.png", "T5.png", "T6.png", "T7.png", "T8.png", "T9.png"],
+        "TotalCount": 36
+      },
+      "Winds": {
+        "Count": 4,
+        "Files": ["East.png", "South.png", "West.png", "North.png"],
+        "TotalCount": 16
+      },
+      "Dragons": {
+        "Count": 3,
+        "Files": ["Red.png", "Green.png", "White.png"],
+        "TotalCount": 12
+      },
+      "Flowers": {
+        "Count": 4,
+        "Files": ["Plum.png", "Orchid.png", "Chrysanthemum.png", "Bamboo.png"],
+        "TotalCount": 4
+      },
+      "Special": {
+        "Count": 2,
+        "Files": ["Chicken.png", "GoldenChicken.png", "Joker.png"],
+        "TotalCount": 4
+      }
+    },
+    "UI": {
+      "Buttons": {
+        "Count": 8,
+        "Files": [
+          "btn_draw.png",
+          "btn_discard.png",
+          "btn_peng.png",
+          "btn_gang.png",
+          "btn_hu.png",
+          "btn_guo.png",
+          "btn_ting.png",
+          "btn_zhuaji.png"
+        ]
+      },
+      "Icons": {
+        "Count": 8,
+        "Files": [
+          "icon_coin.png",
+          "icon_timer.png",
+          "icon_player.png",
+          "icon_settings.png",
+          "icon_sound.png",
+          "icon_music.png",
+          "icon_chicken.png",
+          "icon_ready.png"
+        ]
+      },
+      "Backgrounds": {
+        "Count": 5,
+        "Files": [
+          "bg_game_table.png",
+          "bg_lobby.png",
+          "bg_room.png",
+          "bg_login.png",
+          "bg_card_back.png"
+        ]
+      },
+      "Effects": {
+        "Count": 10,
+        "Files": [
+          "effect_hu.png",
+          "effect_zimo.png",
+          "effect_ji.png",
+          "effect_peng.png",
+          "effect_gang.png",
+          "effect_chow.png",
+          "effect_sha.png",
+          "effect_turn.png",
+          "effect_ting.png",
+          "effect_golden_ji.png"
+        ]
+      }
+    },
+    "Audio": {
+      "SFX_Tiles": {
+        "Count": 3,
+        "Files": ["tile_draw_1.wav", "tile_draw_2.wav", "tile_draw_3.wav"]
+      },
+      "SFX_Actions": {
+        "Count": 6,
+        "Files": [
+          "action_peng.wav",
+          "action_gang.wav",
+          "action_hu.wav",
+          "action_chow.wav",
+          "action_discard.wav",
+          "action_ting.wav"
+        ]
+      },
+      "SFX_Special": {
+        "Count": 8,
+        "Files": [
+          "chicken_call.wav",
+          "ji_player.wav",
+          "golden_ji.wav",
+          "zhuanwan_dou.wav",
+          "mindou.wav",
+          "diandou.wav",
+          "game_start.wav",
+          "game_end.wav"
+        ]
+      },
+      "SFX_UI": {
+        "Count": 7,
+        "Files": [
+          "btn_click.wav",
+          "btn_hover.wav",
+          "btn_open.wav",
+          "btn_close.wav",
+          "notification.wav",
+          "error.wav",
+          "success.wav"
+        ]
+      },
+      "BGM": {
+        "Count": 4,
+        "Files": [
+          "bgm_lobby.wav",
+          "bgm_game.wav",
+          "bgm_guiyang.wav",
+          "bgm_login.wav"
+        ]
+      }
+    }
+  },
+  "TotalAssets": {
+    "Tiles": 144,
+    "UI_Buttons": 8,
+    "UI_Icons": 8,
+    "UI_Backgrounds": 5,
+    "UI_Effects": 10,
+    "SFX_Tiles": 3,
+    "SFX_Actions": 6,
+    "SFX_Special": 8,
+    "SFX_UI": 7,
+    "BGM": 4
+  },
+  "TotalEstimatedSize": {
+    "Tiles_MB": 10,
+    "UI_MB": 5,
+    "Audio_MB": 50,
+    "Total_MB": 65
+  }
+}

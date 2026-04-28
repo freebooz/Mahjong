@@ -1,0 +1,102 @@
+{
+  "GameName": "贵阳捉鸡麻将",
+  "TotalTiles": 144,
+  "Players": 4,
+  "InitialHandCount": 14,
+  "WallTilesCount": 108,
+
+  "TileSuits": {
+    "Characters": {
+      "Name": "万子",
+      "Values": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "TilesPerValue": 4,
+      "TotalCount": 36,
+      "AssetPath": "Art/Tiles/Characters/W{Value}.png"
+    },
+    "Bamboos": {
+      "Name": "筒子",
+      "Values": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "TilesPerValue": 4,
+      "TotalCount": 36,
+      "AssetPath": "Art/Tiles/Bamboos/D{Value}.png"
+    },
+    "Circles": {
+      "Name": "条子",
+      "Values": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "TilesPerValue": 4,
+      "TotalCount": 36,
+      "AssetPath": "Art/Tiles/Circles/T{Value}.png"
+    },
+    "Winds": {
+      "Name": "四风",
+      "Values": ["East", "South", "West", "North"],
+      "TilesPerValue": 4,
+      "TotalCount": 16,
+      "AssetPath": "Art/Tiles/Winds/{Value}.png"
+    },
+    "Dragons": {
+      "Name": "三元",
+      "Values": ["Red", "Green", "White"],
+      "TilesPerValue": 4,
+      "TotalCount": 12,
+      "AssetPath": "Art/Tiles/Dragons/{Value}.png"
+    },
+    "Flowers": {
+      "Name": "花牌",
+      "Values": ["Plum", "Orchid", "Chrysanthemum", "Bamboo"],
+      "TilesPerValue": 1,
+      "TotalCount": 4,
+      "AssetPath": "Art/Tiles/Flowers/{Value}.png",
+      "IsSpecial": true
+    },
+    "Chickens": {
+      "Name": "鸡牌",
+      "Values": ["Chicken"],
+      "TilesPerValue": 1,
+      "TotalCount": 1,
+      "AssetPath": "Art/Tiles/Special/Chicken.png",
+      "IsSpecial": true
+    }
+  },
+
+  "SpecialTiles": {
+    "ChickenTile": {
+      "Value": "Chicken",
+      "BaseScore": 1,
+      "Description": "幺鸡，基础鸡牌"
+    },
+    "GoldenChicken": {
+      "Value": "GoldenChicken",
+      "BaseScore": 2,
+      "Description": "金鸡，翻到时+1番"
+    },
+    "Joker": {
+      "Value": "Joker",
+      "CanReplaceAny": true,
+      "Description": "赖子/百搭，可替代任意牌"
+    }
+  },
+
+  "TileValues": {
+    "Characters": [11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "Bamboos": [21, 22, 23, 24, 25, 26, 27, 28, 29],
+    "Circles": [31, 32, 33, 34, 35, 36, 37, 38, 39],
+    "Winds": [41, 42, 43, 44],
+    "Dragons": [51, 52, 53],
+    "Flowers": [61, 62, 63, 64],
+    "Chickens": [71]
+  },
+
+  "AssetNaming": {
+    "TilePrefix": "T_",
+    "SuitSuffix": {
+      "Characters": "_W",
+      "Bamboos": "_D",
+      "Circles": "_T",
+      "Winds": "_F",
+      "Dragons": "_D",
+      "Flowers": "_H",
+      "Chickens": "_C"
+    }
+  }
+}

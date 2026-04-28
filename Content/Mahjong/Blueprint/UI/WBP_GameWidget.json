@@ -1,0 +1,286 @@
+{
+  "GameWidgetSpec": {
+    "description": "贵阳麻将游戏主界面Widget规范",
+
+    "WBP_GameWidget": {
+      "class_name": "WBP_GameWidget",
+      "parent_class": "MahjongGameWidget",
+      "header_path": "Gameplay/UI/MahjongGameWidget.h",
+      "blueprint_path": "/Game/Mahjong/Blueprint/UI/WBP_GameWidget",
+      "category": "Mahjong|UI|Game",
+
+      "widget_tree": {
+        "MainSwitcher": {
+          "type": "WidgetSwitcher",
+          "children": [
+            {
+              "name": "WaitingPanel",
+              "type": "VerticalBox",
+              "description": "等待开始面板",
+              "children": [
+                {"name": "WaitingText", "type": "TextBlock", "text": "等待玩家加入..."},
+                {"name": "PlayerSlots", "type": "HorizontalBox", "children": [
+                  {"name": "Slot0", "type": "Image", "placeholder": "玩家1位置"},
+                  {"name": "Slot1", "type": "Image", "placeholder": "玩家2位置"},
+                  {"name": "Slot2", "type": "Image", "placeholder": "玩家3位置"},
+                  {"name": "Slot3", "type": "Image", "placeholder": "玩家4位置"}
+                ]}
+              ]
+            },
+            {
+              "name": "PlayingPanel",
+              "type": "CanvasPanel",
+              "description": "游戏中面板",
+              "children": [
+                {
+                  "name": "TopHUD",
+                  "type": "HorizontalBox",
+                  "slot": {"align_x": 0, "align_y": 0, "size_x": 1.0, "size_y": 60},
+                  "children": [
+                    {"name": "TurnInfoText", "type": "TextBlock", "text": "回合信息"},
+                    {"name": "TileCountText", "type": "TextBlock", "text": "牌数: 144"},
+                    {"name": "FanPaiJiText", "type": "TextBlock", "text": "翻牌鸡: -"}
+                  ]
+                },
+                {
+                  "name": "PlayerArea",
+                  "type": "CanvasPanel",
+                  "slot": {"align_x": 0.5, "align_y": 0.5, "size_x": 1.0, "size_y": 1.0},
+                  "children": [
+                    {
+                      "name": "OpponentHands",
+                      "type": "VerticalBox",
+                      "slot": {"align_x": 0.5, "align_y": 0, "offset_y": 20},
+                      "description": "对手手牌区",
+                      "children": [
+                        {"name": "Opponent3Hand", "type": "HorizontalBox"},
+                        {"name": "Opponent2Hand", "type": "HorizontalBox"},
+                        {"name": "Opponent1Hand", "type": "HorizontalBox"}
+                      ]
+                    },
+                    {
+                      "name": "SidePlayers",
+                      "type": "HorizontalBox",
+                      "slot": {"align_x": 0.5, "align_y": 0.5},
+                      "description": "左右两侧玩家",
+                      "children": [
+                        {"name": "LeftPlayer", "type": "VerticalBox"},
+                        {"name": "CenterArea", "type": "CanvasPanel", "size": {"x": 400, "y": 200}},
+                        {"name": "RightPlayer", "type": "VerticalBox"}
+                      ]
+                    },
+                    {
+                      "name": "SelfHand",
+                      "type": "HorizontalBox",
+                      "slot": {"align_x": 0.5, "align_y": 1, "offset_y": -180},
+                      "description": "自己的手牌"
+                    }
+                  ]
+                },
+                {
+                  "name": "DiscardPoolArea",
+                  "type": "WrapBox",
+                  "slot": {"align_x": 0.5, "align_y": 0.65, "size_x": 600, "size_y": 150},
+                  "description": "弃牌池"
+                },
+                {
+                  "name": "ActionButtons",
+                  "type": "HorizontalBox",
+                  "slot": {"align_x": 0.5, "align_y": 1, "offset_x": -250, "offset_y": -100, "size_x": 500, "size_y": 80},
+                  "children": [
+                    {"name": "DrawButton", "type": "Button", "content": "摸牌", "visibility": "Visible"},
+                    {"name": "DiscardButton", "type": "Button", "content": "出牌", "visibility": "Collapsed"},
+                    {"name": "PengButton", "type": "Button", "content": "碰", "visibility": "Collapsed"},
+                    {"name": "GangButton", "type": "Button", "content": "杠", "visibility": "Collapsed"},
+                    {"name": "HuButton", "type": "Button", "content": "胡", "visibility": "Collapsed"},
+                    {"name": "GuoButton", "type": "Button", "content": "过", "visibility": "Collapsed"},
+                    {"name": "TingButton", "type": "Button", "content": "报听", "visibility": "Collapsed"}
+                  ]
+                },
+                {
+                  "name": "AlertImage",
+                  "type": "Image",
+                  "slot": {"align_x": 1, "align_y": 0.5, "offset_x": -100, "offset_y": 0},
+                  "visibility": "Collapsed",
+                  "description": "警报提示"
+                }
+              ]
+            },
+            {
+              "name": "ResultPanel",
+              "type": "CanvasPanel",
+              "description": "结算面板",
+              "children": [
+                {"name": "ResultTitle", "type": "TextBlock", "text": "游戏结束"},
+                {"name": "ResultScrollBox", "type": "ScrollBox"},
+                {"name": "OKButton", "type": "Button", "content": "确定"}
+              ]
+            }
+          ]
+        }
+      },
+
+      "functions": {
+        "InitializeWidget": {
+          "params": [{"name": "Controller", "type": "AMahjongPlayerController*"}],
+          "logic": [
+            {"node": "Store Controller Reference"},
+            {"node": "Set PlayerController"},
+            {"node": "Hide All Action Buttons"},
+            {"node": "Set MainSwitcher to WaitingPanel"}
+          ]
+        },
+
+        "UpdateHandTiles": {
+          "params": [{"name": "TileIDs", "type": "TArray<int32>"}],
+          "logic": [
+            {"node": "Clear SelfHand"},
+            {"node": "For Each TileID", "subgraph": [
+              {"node": "Create TileWidget from TileID"},
+              {"node": "Add to SelfHand"},
+              {"node": "Bind OnClicked to OnTileClicked"}
+            ]}
+          ]
+        },
+
+        "UpdateTurnIndicator": {
+          "params": [{"name": "CurrentPlayer", "type": "int32"}, {"name": "bIsMyTurn", "type": "bool"}],
+          "logic": [
+            {"node": "If bIsMyTurn", "subgraph": [
+              {"node": "Set TurnText", "params": {"text": ">>> 你的回合 <<<"}},
+              {"node": "Set TurnText Color", "params": {"color": "Green"}}
+            ]},
+            {"node": "Else", "subgraph": [
+              {"node": "Set TurnText", "params": {"text": "玩家 CurrentPlayer 的回合"}},
+              {"node": "Set TurnText Color", "params": {"color": "White"}}
+            ]}
+          ]
+        },
+
+        "ShowActionButtons": {
+          "params": [{"name": "Actions", "type": "FGameActionUI"}],
+          "logic": [
+            {"node": "Set PengButton Visibility", "params": {"visible": "Actions.bCanPeng"}},
+            {"node": "Set GangButton Visibility", "params": {"visible": "Actions.bCanGang"}},
+            {"node": "Set HuButton Visibility", "params": {"visible": "Actions.bCanHu"}},
+            {"node": "Set GuoButton Visibility", "params": {"visible": "Actions.bCanGuo"}},
+            {"node": "Set TingButton Visibility", "params": {"visible": "Actions.bCanBaoTing"}}
+          ]
+        },
+
+        "ShowDrawButton": {
+          "params": [{"name": "bShow", "type": "bool"}],
+          "logic": [
+            {"node": "If bShow", "subgraph": [
+              {"node": "Set DrawButton Visibility", "params": {"visible": "Visible"}},
+              {"node": "Set DiscardButton Visibility", "params": {"visible": "Collapsed"}}
+            ]},
+            {"node": "Else", "subgraph": [
+              {"node": "Set DrawButton Visibility", "params": {"visible": "Collapsed"}}
+            ]}
+          ]
+        },
+
+        "ShowDiscardButton": {
+          "params": [{"name": "bShow", "type": "bool"}],
+          "logic": [
+            {"node": "If bShow", "subgraph": [
+              {"node": "Set DiscardButton Visibility", "params": {"visible": "Visible"}},
+              {"node": "Set DrawButton Visibility", "params": {"visible": "Collapsed"}}
+            ]}
+          ]
+        },
+
+        "SelectTile": {
+          "params": [{"name": "Index", "type": "int32"}],
+          "logic": [
+            {"node": "If PreviousSelection exists", "subgraph": [
+              {"node": "Deselect Previous Tile"}
+            ]},
+            {"node": "Set SelectedTileIndex", "params": {"index": "Index"}},
+            {"node": "Highlight Tile at Index"},
+            {"node": "Call PlayerController OnTileSelected"}
+          ]
+        }
+      },
+
+      "event_graph": {
+        "NativeTick": {
+          "description": "每帧更新",
+          "logic": [
+            {"node": "If CountdownTime > 0", "subgraph": [
+              {"node": "Decrease CountdownTime by DeltaTime"},
+              {"node": "Update CountdownText"},
+              {"node": "If CountdownTime <= 0", "subgraph": [
+                {"node": "Clear CountdownText"},
+                {"node": "Call OnCountdownExpired"}
+              ]}
+            ]}
+          ]
+        },
+
+        "OnDrawButtonClicked": {
+          "description": "摸牌按钮点击",
+          "logic": [
+            {"node": "Call PlayerController OnDrawTileClicked"},
+            {"node": "Hide DrawButton"},
+            {"node": "Show DiscardButton"}
+          ]
+        },
+
+        "OnDiscardButtonClicked": {
+          "description": "出牌按钮点击",
+          "logic": [
+            {"node": "If SelectedTileIndex >= 0", "subgraph": [
+              {"node": "Call PlayerController OnDiscardTileClicked", "params": {"TileIndex": "SelectedTileIndex"}},
+              {"node": "Hide DiscardButton"},
+              {"node": "Clear Selection"}
+            ]}
+          ]
+        },
+
+        "OnPengButtonClicked": {
+          "description": "碰按钮点击",
+          "logic": [
+            {"node": "Call PlayerController OnPengClicked"},
+            {"node": "Hide Action Buttons"}
+          ]
+        },
+
+        "OnGangButtonClicked": {
+          "description": "杠按钮点击",
+          "logic": [
+            {"node": "Call PlayerController OnGangClicked", "params": {"GangType": "DianDou"}},
+            {"node": "Hide Action Buttons"}
+          ]
+        },
+
+        "OnHuButtonClicked": {
+          "description": "胡按钮点击",
+          "logic": [
+            {"node": "Call PlayerController OnHuClicked"},
+            {"node": "Hide Action Buttons"}
+          ]
+        },
+
+        "OnTingButtonClicked": {
+          "description": "报听按钮点击",
+          "logic": [
+            {"node": "Call PlayerController OnBaoTingClicked"},
+            {"node": "Show Ting Alert"}
+          ]
+        }
+      },
+
+      "bindings": {
+        "DrawButton": "OnClicked",
+        "DiscardButton": "OnClicked",
+        "PengButton": "OnClicked",
+        "GangButton": "OnClicked",
+        "HuButton": "OnClicked",
+        "TingButton": "OnClicked",
+        "OKButton": "OnClicked"
+      }
+    }
+  }
+}

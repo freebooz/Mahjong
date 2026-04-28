@@ -1,0 +1,14 @@
+<!-- 兰 麻将牌 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 背景 -->
+  <rect width="128" height="128" fill="#F5F5DC" stroke="#9B59B6" stroke-width="6" rx="8"/>
+
+  <!-- 内边框 -->
+  <rect x="8" y="8" width="112" height="112" fill="none" stroke="#9B59B6" stroke-width="2" rx="4"/>
+
+  <!-- 主文字 -->
+  <text x="64" y="75" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#9B59B6" text-anchor="middle">兰</text>
+
+  <!-- 副文字(如果有) -->
+  <text x='64' y='115' font-family='Arial, sans-serif' font-size='20' fill='{color}' text-anchor='middle'>{secondary_text}</text>
+</svg>

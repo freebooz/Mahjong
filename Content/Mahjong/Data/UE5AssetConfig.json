@@ -1,0 +1,181 @@
+{
+  "UE5AssetConfig": {
+    "Version": "1.0",
+    "GameName": "贵阳捉鸡麻将",
+    "EngineVersion": "5.3+",
+
+    "AssetDirectories": {
+      "Root": "/Game/Mahjong",
+      "Tiles": "/Game/Mahjong/Art/Tiles",
+      "Tilesets": "/Game/Mahjong/Art/Tilesets",
+      "UI": "/Game/Mahjong/Art/UI",
+      "Audio": "/Game/Mahjong/Audio",
+      "Data": "/Game/Mahjong/Data",
+      "Fonts": "/Game/Mahjong/Fonts",
+      "Blueprint": "/Game/Mahjong/Blueprint"
+    },
+
+    "TileAssetMapping": {
+      "TextureType": "Texture2D",
+      "SpriteType": "PaperSprite",
+      "SpriteSheetType": "PaperSpriteSheet",
+
+      "Tiles": {
+        "Characters": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Characters",
+          "AssetNameFormat": "T_Characters_{Value}",
+          "Count": 36,
+          "Variants": 4
+        },
+        "Bamboos": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Bamboos",
+          "AssetNameFormat": "T_Bamboos_{Value}",
+          "Count": 36,
+          "Variants": 4
+        },
+        "Circles": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Circles",
+          "AssetNameFormat": "T_Circles_{Value}",
+          "Count": 36,
+          "Variants": 4
+        },
+        "Winds": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Winds",
+          "AssetNameFormat": "T_Winds_{Direction}",
+          "Count": 16,
+          "Variants": 1
+        },
+        "Dragons": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Dragons",
+          "AssetNameFormat": "T_Dragons_{Type}",
+          "Count": 12,
+          "Variants": 1
+        },
+        "Flowers": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Flowers",
+          "AssetNameFormat": "T_Flowers_{Flower}",
+          "Count": 4,
+          "Variants": 1
+        },
+        "Special": {
+          "AssetPath": "/Game/Mahjong/Art/Tiles/Special",
+          "AssetNameFormat": "T_Special_{Type}",
+          "Count": 4,
+          "Variants": 1
+        }
+      }
+    },
+
+    "AudioAssetMapping": {
+      "SoundCueType": "SoundCue",
+      "SoundWaveType": "SoundWave",
+
+      "SFX": {
+        "Tiles": {
+          "Path": "/Game/Mahjong/Audio/SFX/Tiles",
+          "Prefix": "SFX_Tile_"
+        },
+        "Actions": {
+          "Path": "/Game/Mahjong/Audio/SFX/Actions",
+          "Prefix": "SFX_Action_"
+        },
+        "Special": {
+          "Path": "/Game/Mahjong/Audio/SFX/Special",
+          "Prefix": "SFX_Special_"
+        },
+        "UI": {
+          "Path": "/Game/Mahjong/Audio/SFX/UI",
+          "Prefix": "SFX_UI_"
+        }
+      },
+
+      "BGM": {
+        "Path": "/Game/Mahjong/Audio/BGM",
+        "Prefix": "BGM_"
+      }
+    },
+
+    "WidgetAssetMapping": {
+      "Login": {
+        "Path": "/Game/Mahjong/Blueprint/UI",
+        "AssetName": "WBP_Login",
+        "ParentClass": "/Script/UMG.UserWidget"
+      },
+      "Lobby": {
+        "Path": "/Game/Mahjong/Blueprint/UI",
+        "AssetName": "WBP_Lobby",
+        "ParentClass": "/Script/UMG.UserWidget"
+      },
+      "Room": {
+        "Path": "/Game/Mahjong/Blueprint/UI",
+        "AssetName": "WBP_Room",
+        "ParentClass": "/Script/UMG.UserWidget"
+      },
+      "GameHUD": {
+        "Path": "/Game/Mahjong/Blueprint/UI",
+        "AssetName": "WBP_GameHUD",
+        "ParentClass": "/Script/UMG.UserWidget"
+      }
+    },
+
+    "BlueprintAssetMapping": {
+      "GameMode": {
+        "Path": "/Game/Mahjong/Blueprint/Modes",
+        "AssetName": "BP_GuiyangGameMode",
+        "ParentClass": "/Script/MahjongGame.AMahjongGameMode"
+      },
+      "GameState": {
+        "Path": "/Game/Mahjong/Blueprint/GameState",
+        "AssetName": "BP_GuiyangGameState",
+        "ParentClass": "/Script/MahjongGame.AMahjongGameStateBase"
+      },
+      "PlayerController": {
+        "Path": "/Game/Mahjong/Blueprint/Game",
+        "AssetName": "BP_GuiyangPlayerController",
+        "ParentClass": "/Script/MahjongGame.AMahjongPlayerController"
+      },
+      "PlayerState": {
+        "Path": "/Game/Mahjong/Blueprint/PlayerState",
+        "AssetName": "BP_GuiyangPlayerState",
+        "ParentClass": "/Script/MahjongGame.AMahjongPlayerStateBase"
+      },
+      "GameRules": {
+        "Path": "/Game/Mahjong/Blueprint/Rules",
+        "AssetName": "BP_GuiyangGameRules",
+        "ParentClass": "/Script/MahjongGame.UBP_GuiyangGameRules"
+      }
+    },
+
+    "DataAssetMapping": {
+      "TileValues": {
+        "Path": "/Game/Mahjong/Data",
+        "AssetName": "DA_TileValues",
+        "Type": "DataTable"
+      },
+      "ScoringRules": {
+        "Path": "/Game/Mahjong/Data",
+        "AssetName": "DA_ScoringRules",
+        "Type": "DataTable"
+      },
+      "AudioConfig": {
+        "Path": "/Game/Mahjong/Data",
+        "AssetName": "DA_AudioConfig",
+        "Type": "DataAsset"
+      }
+    },
+
+    "ImportSettings": {
+      "Texture": {
+        "MipGenSettings": "TextureMipGenSettings.TMGS_NoMipmaps",
+        "LODGroup": "TextureGroup.TexGroup_UI",
+        "CompressionSettings": "TextureCompressionSettings.TC_Default",
+        "MaxTextureSize": 512
+      },
+      "Audio": {
+        "Quality": "AudioQuality_High",
+        "SampleRate": 44100,
+        "Channels": 2
+      }
+    }
+  }
+}

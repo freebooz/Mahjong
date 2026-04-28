@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe\" \"H:/MahjongGame/MahjongGame.uproject\" -Game -Silent -NoSplash -ExecCmds=\"MapCheck; ResavePackages\")",
+      "Bash('/d/Program Files/Epic Games/UE_5.7/Engine/Build/BatchFiles/Build.bat' MahjongGameServer Win64 Development -Project=__TRACKED_VAR__/MahjongGame.uproject -WaitMutex -NoBuiltInFlush)",
+      "Bash(\"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe\" \"H:/MahjongGame/MahjongGame.uproject\" -game)",
+      "Bash(tasklist)",
+      "Bash(\"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe\" \"H:/MahjongGame/MahjongGame.uproject\" -game -log)",
+      "Bash('/d/Program Files/Epic Games/UE_5.7/Engine/Build/BatchFiles/Build.bat' MahjongGameEditor Win64 Development -Project=__TRACKED_VAR__/MahjongGame.uproject -WaitMutex -NoBuiltInFlush)",
+      "WebSearch",
+      "Bash(\"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe\" \"H:/MahjongGame/MahjongGame.uproject\" /Game/Maps/Login -server -log -Windowed)",
+      "Read(//c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/**)",
+      "Read(//c/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/**)",
+      "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Professional/MSBuild/Current/Bin/MSBuild.exe\" \"h:/MahjongGame/MahjongGame.sln\" /p:Configuration=Development /p:Platform=Win64 /t:Build /m /v:m)",
+      "Bash(dotnet tool *)",
+      "Bash(\"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/DotNET/AutomationTool/UnrealBuildTool.exe\" -ProjectFiles -Project=\"h:/MahjongGame/MahjongGame.uproject\" -Game -Engine)",
+      "Bash(\"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe\" \"h:/MahjongGame/MahjongGame.uproject\" -ExecutePythonScript=\"h:/MahjongGame/Scripts/CreateAllBlueprints.py\" -game)",
+      "Bash(\"D:/Program Files/Epic Games/UE_5.7/Engine/Build/BatchFiles/GenerateProjectFiles.bat\" -Project=\"MahjongGame.uproject\" -Game -Engine)",
+      "Read(//d/Program Files/Epic Games//**)",
+      "Bash(find /d -name \"GenerateProjectFiles.bat\")",
+      "Bash(dotnet \"/d/Program Files/Epic Games/UE_5.7/Engine/Binaries/DotNET/UnrealBuildTool/UnrealBuildTool.dll\" Development Win64 -Project=\"H:/MahjongGame/MahjongGame.uproject\" -Target=\"MahjongGameEditor Win64 Development\")",
+      "Bash(cmake --build build --target MahjongGameEditor)"
+    ]
+  }
+}

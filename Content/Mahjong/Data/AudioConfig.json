@@ -1,0 +1,266 @@
+{
+  "AudioSettings": {
+    "MasterVolume": 1.0,
+    "SFXVolume": 0.8,
+    "BGMVolume": 0.5,
+    "VoiceVolume": 1.0
+  },
+
+  "SoundCategories": {
+    "SFX": {
+      "Volume": 0.8,
+      "bIsMuted": false,
+      "bOverrideAttenuation": false
+    },
+    "BGM": {
+      "Volume": 0.5,
+      "bIsMuted": false,
+      "bOverrideAttenuation": false
+    },
+    "UI": {
+      "Volume": 0.6,
+      "bIsMuted": false,
+      "bOverrideAttenuation": false
+    },
+    "VOICE": {
+      "Volume": 1.0,
+      "bIsMuted": false,
+      "bOverrideAttenuation": false
+    }
+  },
+
+  "TileSounds": {
+    "Draw": {
+      "Sounds": [
+        "Audio/SFX/Tiles/tile_draw_1.wav",
+        "Audio/SFX/Tiles/tile_draw_2.wav",
+        "Audio/SFX/Tiles/tile_draw_3.wav"
+      ],
+      "Volume": 0.7,
+      "Pitch": {
+        "Min": 0.95,
+        "Max": 1.05
+      },
+      "bIsLooping": false,
+      "bIsOneShot": true
+    },
+    "Discard": {
+      "Sounds": [
+        "Audio/SFX/Tiles/tile_discard_1.wav",
+        "Audio/SFX/Tiles/tile_discard_2.wav"
+      ],
+      "Volume": 0.6,
+      "Pitch": {
+        "Min": 0.95,
+        "Max": 1.05
+      }
+    },
+    "Flip": {
+      "Sounds": [
+        "Audio/SFX/Tiles/tile_flip.wav"
+      ],
+      "Volume": 0.5,
+      "bIsOneShot": true
+    }
+  },
+
+  "ActionSounds": {
+    "Peng": {
+      "Sound": "Audio/SFX/Actions/action_peng.wav",
+      "Volume": 0.8,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    },
+    "Gang": {
+      "Sound": "Audio/SFX/Actions/action_gang.wav",
+      "Volume": 0.9,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    },
+    "Hu": {
+      "Sound": "Audio/SFX/Actions/action_hu.wav",
+      "Volume": 1.0,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    },
+    "ZiMo": {
+      "Sound": "Audio/SFX/Actions/action_zimo.wav",
+      "Volume": 1.0,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    },
+    "DianPao": {
+      "Sound": "Audio/SFX/Actions/action_dianpao.wav",
+      "Volume": 0.9,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    },
+    "Chow": {
+      "Sound": "Audio/SFX/Actions/action_chow.wav",
+      "Volume": 0.7,
+      "Pitch": {
+        "Min": 0.9,
+        "Max": 1.1
+      },
+      "bIsOneShot": true
+    },
+    "Ting": {
+      "Sound": "Audio/SFX/Actions/action_ting.wav",
+      "Volume": 0.8,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    },
+    "Guo": {
+      "Sound": "Audio/SFX/Actions/action_guo.wav",
+      "Volume": 0.5,
+      "Pitch": 1.0,
+      "bIsOneShot": true
+    }
+  },
+
+  "SpecialSounds": {
+    "Chicken": {
+      "Sound": "Audio/SFX/Special/chicken_call.wav",
+      "Volume": 0.8,
+      "bIsOneShot": true
+    },
+    "GoldenChicken": {
+      "Sound": "Audio/SFX/Special/golden_ji.wav",
+      "Volume": 0.9,
+      "bIsOneShot": true
+    },
+    "MenDou": {
+      "Sound": "Audio/SFX/Special/mindou.wav",
+      "Volume": 0.8,
+      "bIsOneShot": true
+    },
+    "ZhuanWanDou": {
+      "Sound": "Audio/SFX/Special/zhuanwan_dou.wav",
+      "Volume": 0.9,
+      "bIsOneShot": true
+    },
+    "DianDou": {
+      "Sound": "Audio/SFX/Special/diandou.wav",
+      "Volume": 1.0,
+      "bIsOneShot": true
+    },
+    "GameStart": {
+      "Sound": "Audio/SFX/Special/game_start.wav",
+      "Volume": 0.8,
+      "bIsOneShot": true
+    },
+    "GameEnd": {
+      "Sound": "Audio/SFX/Special/game_end.wav",
+      "Volume": 0.8,
+      "bIsOneShot": true
+    },
+    "RoundStart": {
+      "Sound": "Audio/SFX/Special/round_start.wav",
+      "Volume": 0.7,
+      "bIsOneShot": true
+    },
+    "DealerDice": {
+      "Sound": "Audio/SFX/Special/dealer_dice.wav",
+      "Volume": 0.6,
+      "bIsOneShot": true
+    }
+  },
+
+  "UISounds": {
+    "ButtonClick": {
+      "Sound": "Audio/SFX/UI/btn_click.wav",
+      "Volume": 0.6,
+      "bIsOneShot": true
+    },
+    "ButtonHover": {
+      "Sound": "Audio/SFX/UI/btn_hover.wav",
+      "Volume": 0.3,
+      "bIsOneShot": true
+    },
+    "PanelOpen": {
+      "Sound": "Audio/SFX/UI/btn_open.wav",
+      "Volume": 0.5,
+      "bIsOneShot": true
+    },
+    "PanelClose": {
+      "Sound": "Audio/SFX/UI/btn_close.wav",
+      "Volume": 0.5,
+      "bIsOneShot": true
+    },
+    "Notification": {
+      "Sound": "Audio/SFX/UI/notification.wav",
+      "Volume": 0.7,
+      "bIsOneShot": true
+    },
+    "Error": {
+      "Sound": "Audio/SFX/UI/error.wav",
+      "Volume": 0.7,
+      "bIsOneShot": true
+    },
+    "Success": {
+      "Sound": "Audio/SFX/UI/success.wav",
+      "Volume": 0.7,
+      "bIsOneShot": true
+    }
+  },
+
+  "BackgroundMusic": {
+    "Lobby": {
+      "Sound": "Audio/BGM/bgm_lobby.wav",
+      "Volume": 0.4,
+      "bIsLooping": true,
+      "FadeInDuration": 2.0,
+      "FadeOutDuration": 1.0
+    },
+    "Game": {
+      "Sound": "Audio/BGM/bgm_game.wav",
+      "Volume": 0.35,
+      "bIsLooping": true,
+      "FadeInDuration": 2.0,
+      "FadeOutDuration": 1.0
+    },
+    "Guiyang": {
+      "Sound": "Audio/BGM/bgm_guiyang.wav",
+      "Volume": 0.4,
+      "bIsLooping": true,
+      "FadeInDuration": 2.0,
+      "FadeOutDuration": 1.0
+    },
+    "Login": {
+      "Sound": "Audio/BGM/bgm_login.wav",
+      "Volume": 0.3,
+      "bIsLooping": true,
+      "FadeInDuration": 2.0,
+      "FadeOutDuration": 1.0
+    }
+  },
+
+  "SoundMixes": {
+    "Default": {
+      "MasterVolume": 1.0,
+      "SFXVolume": 0.8,
+      "BGMVolume": 0.5
+    },
+    "Muted": {
+      "MasterVolume": 0.0,
+      "SFXVolume": 0.0,
+      "BGMVolume": 0.0
+    }
+  },
+
+  "AudioAttenuation": {
+    "Global": {
+      "bIsValid": true,
+      "DistanceMethod": "ATTENUATION_Linear",
+      "FalloffDistance": 5000.0,
+      "MinDistance": 100.0,
+      "MaxDistance": 5000.0
+    },
+    "UI": {
+      "bIsValid": false
+    },
+    "BGM": {
+      "bIsValid": false
+    }
+  }
+}

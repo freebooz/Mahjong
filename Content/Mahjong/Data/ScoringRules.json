@@ -1,0 +1,156 @@
+{
+  "GameName": "贵阳捉鸡麻将计分规则",
+  "BaseScore": 1,
+
+  "HuTypes": {
+    "PingHu": {
+      "Name": "平胡",
+      "BaseScore": 1,
+      "Multiple": 1,
+      "Description": "基本胡牌类型"
+    },
+    "DaDuiZi": {
+      "Name": "大对子",
+      "BaseScore": 1,
+      "Multiple": 2,
+      "Description": "4个对子+2个刻子",
+      "Requirements": ["PengCount >= 2", "DuiZiCount >= 4"]
+    },
+    "QiDui": {
+      "Name": "七对",
+      "BaseScore": 1,
+      "Multiple": 2,
+      "Description": "7个对子"
+    },
+    "LongQiDui": {
+      "Name": "龙七对",
+      "BaseScore": 1,
+      "Multiple": 3,
+      "Description": "8个对子（含一对龙）"
+    },
+    "QingYiSe": {
+      "Name": "清一色",
+      "BaseScore": 1,
+      "Multiple": 3,
+      "Description": "全部同一种花色"
+    },
+    "ZhuaJi": {
+      "Name": "捉鸡",
+      "BaseScore": 1,
+      "Multiple": 1,
+      "Description": "胡牌时手中持有鸡牌"
+    },
+    "JiGang": {
+      "Name": "鸡杠",
+      "BaseScore": 1,
+      "Multiple": 2,
+      "Description": "杠上翻鸡"
+    }
+  },
+
+  "DouTypes": {
+    "MenDou": {
+      "Name": "闷豆",
+      "Score": 1,
+      "Multiple": 1,
+      "Description": "暗杠",
+      "AssetPath": "Audio/SFX/Special/mindou.wav"
+    },
+    "ZhuanWanDou": {
+      "Name": "转弯豆",
+      "Score": 2,
+      "Multiple": 2,
+      "Description": "碰后摸到第四张杠",
+      "AssetPath": "Audio/SFX/Special/zhuanwan_dou.wav"
+    },
+    "DianDou": {
+      "Name": "点豆",
+      "Score": 3,
+      "Multiple": 3,
+      "Description": "点杠别人碰的牌",
+      "AssetPath": "Audio/SFX/Special/diandou.wav"
+    }
+  },
+
+  "ChickenRules": {
+    "Enabled": true,
+    "BaseChickenScore": 1,
+
+    "ChickenTypes": {
+      "YaoJi": {
+        "Name": "幺鸡",
+        "Value": 1,
+        "Score": 1,
+        "Description": "1条为基础鸡牌"
+      },
+      "FanPaiJi": {
+        "Name": "翻牌鸡",
+        "Value": null,
+        "Score": 1,
+        "Description": "翻牌翻到的第一张鸡"
+      },
+      "ChongFengJi": {
+        "Name": "冲锋鸡",
+        "Score": 2,
+        "Description": "报听后打出的第一张鸡"
+      },
+      "ZeRenJi": {
+        "Name": "责任鸡",
+        "Score": 2,
+        "Description": "点炮时打出的鸡，被点方负责"
+      },
+      "JinJi": {
+        "Name": "金鸡",
+        "Score": 2,
+        "Description": "翻牌翻到翻牌区的金鸡"
+      }
+    },
+
+    "ChickenDistribution": {
+      "PerPlayer": 1,
+      "TotalChickens": 4
+    }
+  },
+
+  "FanMultiplier": {
+    "1Fan": ["PingHu", "ZhuaJi"],
+    "2Fan": ["DaDuiZi", "QiDui", "MenDou", "ChongFengJi"],
+    "3Fan": ["LongQiDui", "QingYiSe", "ZhuanWanDou", "JinJi"],
+    "4Fan": ["DianDou", "ZeRenJi"]
+  },
+
+  "ZhuangBonus": {
+    "ZhuangHuMultiple": 2,
+    "ZhuangwinSelfDraw": 3,
+    "Description": "庄家胡牌翻倍，自摸再加倍"
+  },
+
+  "FinalScoreCalculation": {
+    "Formula": "(BaseScore * HuMultiple * FanTotal + DouScore + ChickenScore) * ZhuangMultiplier",
+    "MinScore": 1,
+    "MaxScore": 100
+  },
+
+  "AssetPaths": {
+    "HuEffects": {
+      "PingHu": "Art/UI/Effects/effect_hu.png",
+      "DaDuiZi": "Art/UI/Effects/effect_hu.png",
+      "QiDui": "Art/UI/Effects/effect_hu.png",
+      "QingYiSe": "Art/UI/Effects/effect_qingyise.png"
+    },
+    "ChickenEffects": {
+      "YaoJi": "Art/UI/Effects/effect_ji.png",
+      "JinJi": "Art/UI/Effects/effect_golden_ji.png"
+    }
+  },
+
+  "AudioCues": {
+    "Hu": "Audio/SFX/Actions/action_hu.wav",
+    "ZiMo": "Audio/SFX/Actions/action_zimo.wav",
+    "DianPao": "Audio/SFX/Actions/action_dianpao.wav",
+    "Peng": "Audio/SFX/Actions/action_peng.wav",
+    "Gang": "Audio/SFX/Actions/action_gang.wav",
+    "Chicken": "Audio/SFX/Special/chicken_call.wav",
+    "GoldenChicken": "Audio/SFX/Special/golden_ji.wav"
+  }
+}

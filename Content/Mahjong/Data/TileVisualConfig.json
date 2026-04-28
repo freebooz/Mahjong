@@ -1,0 +1,76 @@
+{
+  "TileVisualConfig": {
+    "TextureSize": {
+      "Width": 128,
+      "Height": 128
+    },
+    "BackgroundColor": "#FFFFFF",
+    "BorderColor": "#000000",
+    "BorderWidth": 4
+  },
+
+  "CharacterTiles": {
+    "1": { "Chinese": "一", "Value": "萬", "Color": "#E74C3C" },
+    "2": { "Chinese": "二", "Value": "萬", "Color": "#E74C3C" },
+    "3": { "Chinese": "三", "Value": "萬", "Color": "#E74C3C" },
+    "4": { "Chinese": "四", "Value": "萬", "Color": "#2C3E50" },
+    "5": { "Chinese": "五", "Value": "萬", "Color": "#2C3E50" },
+    "6": { "Chinese": "六", "Value": "萬", "Color": "#2C3E50" },
+    "7": { "Chinese": "七", "Value": "萬", "Color": "#27AE60" },
+    "8": { "Chinese": "八", "Value": "萬", "Color": "#27AE60" },
+    "9": { "Chinese": "九", "Value": "萬", "Color": "#27AE60" }
+  },
+
+  "BambooTiles": {
+    "1": { "Chinese": "一", "Symbol": "筒", "Color": "#27AE60" },
+    "2": { "Chinese": "二", "Symbol": "筒", "Color": "#27AE60" },
+    "3": { "Chinese": "三", "Symbol": "筒", "Color": "#27AE60" },
+    "4": { "Chinese": "四", "Symbol": "筒", "Color": "#2C3E50" },
+    "5": { "Chinese": "五", "Symbol": "筒", "Color": "#2C3E50" },
+    "6": { "Chinese": "六", "Symbol": "筒", "Color": "#2C3E50" },
+    "7": { "Chinese": "七", "Symbol": "筒", "Color": "#E74C3C" },
+    "8": { "Chinese": "八", "Symbol": "筒", "Color": "#E74C3C" },
+    "9": { "Chinese": "九", "Symbol": "筒", "Color": "#E74C3C" }
+  },
+
+  "CircleTiles": {
+    "1": { "Chinese": "一", "Symbol": "条", "Color": "#3498DB" },
+    "2": { "Chinese": "二", "Symbol": "条", "Color": "#3498DB" },
+    "3": { "Chinese": "三", "Symbol": "条", "Color": "#3498DB" },
+    "4": { "Chinese": "四", "Symbol": "条", "Color": "#2C3E50" },
+    "5": { "Chinese": "五", "Symbol": "条", "Color": "#2C3E50" },
+    "6": { "Chinese": "六", "Symbol": "条", "Color": "#2C3E50" },
+    "7": { "Chinese": "七", "Symbol": "条", "Color": "#9B59B6" },
+    "8": { "Chinese": "八", "Symbol": "条", "Color": "#9B59B6" },
+    "9": { "Chinese": "九", "Symbol": "条", "Color": "#9B59B6" }
+  },
+
+  "WindTiles": {
+    "East": { "Chinese": "東", "Color": "#2C3E50" },
+    "South": { "Chinese": "南", "Color": "#C0392B" },
+    "West": { "Chinese": "西", "Color": "#2980B9" },
+    "North": { "Chinese": "北", "Color": "#27AE60" }
+  },
+
+  "DragonTiles": {
+    "Red": { "Chinese": "中", "Color": "#E74C3C" },
+    "Green": { "Chinese": "發", "Color": "#27AE60" },
+    "White": { "Chinese": "", "Color": "#BDC3C7", "Style": "Empty" }
+  },
+
+  "SpecialTiles": {
+    "Chicken": { "Chinese": "雞", "Color": "#F39C12" },
+    "GoldenChicken": { "Chinese": "金雞", "Color": "#FFD700" },
+    "Joker": { "Chinese": "賴", "Color": "#9B59B6" }
+  },
+
+  "FontConfig": {
+    "MainFont": "/Engine/EngineFonts/Roboto",
+    "ChineseFont": "ChineseFont_TTF",
+    "FontSize": {
+      "Large": 64,
+      "Medium": 48,
+      "Small": 32
+    }
+  }
+}

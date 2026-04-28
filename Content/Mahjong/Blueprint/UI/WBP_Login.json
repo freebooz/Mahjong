@@ -1,0 +1,450 @@
+{
+  "BlueprintWidgets": {
+    "description": "贵阳麻将UI蓝图类实现规范",
+
+    "Login_WBP": {
+      "class_name": "WBP_Login",
+      "parent_class": "LoginWidgetBase",
+      "header_path": "Gameplay/UI/LoginWidgetBase.h",
+      "blueprint_path": "/Game/Mahjong/Blueprint/UI/WBP_Login",
+      "category": "Mahjong|UI|Login",
+
+      "widget_tree": {
+        "RootCanvas": {
+          "type": "CanvasPanel",
+          "anchors": {"min_x": 0, "min_y": 0, "max_x": 1, "max_y": 1},
+          "children": [
+            {
+              "name": "BackgroundImage",
+              "type": "Image",
+              "slot": {"align_x": 0, "align_y": 0, "offset_x": 0, "offset_y": 0, "size_x": 1.0, "size_y": 1.0}
+            },
+            {
+              "name": "LoginPanel",
+              "type": "VerticalBox",
+              "slot": {"align_x": 0.5, "align_y": 0.4, "offset_x": -200, "offset_y": -150, "size_x": 400, "size_y": 300},
+              "children": [
+                {"name": "TitleText", "type": "TextBlock", "text": "贵阳捉鸡麻将", "font_size": 36},
+                {"name": "Spacer1", "type": "Spacer", "size": {"x": 20, "y": 20}},
+                {"name": "UsernameLabel", "type": "TextBlock", "text": "用户名"},
+                {"name": "UsernameInput", "type": "EditableTextBox", "hint_text": "请输入用户名"},
+                {"name": "Spacer2", "type": "Spacer", "size": {"x": 20, "y": 10}},
+                {"name": "PasswordLabel", "type": "TextBlock", "text": "密码"},
+                {"name": "PasswordInput", "type": "EditableTextBox", "is_password": true, "hint_text": "请输入密码"},
+                {"name": "Spacer3", "type": "Spacer", "size": {"x": 20, "y": 20}},
+                {"name": "ErrorText", "type": "TextBlock", "text": "", "color": {"R": 1, "G": 0, "B": 0}},
+                {"name": "Spacer4", "type": "Spacer", "size": {"x": 20, "y": 10}},
+                {
+                  "name": "ButtonBox",
+                  "type": "HorizontalBox",
+                  "children": [
+                    {"name": "LoginButton", "type": "Button", "content": "登 录"},
+                    {"name": "SpacerBtn", "type": "Spacer", "size": {"x": 20, "y": 10}},
+                    {"name": "RegisterButton", "type": "Button", "content": "注 册"}
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "VersionText",
+              "type": "TextBlock",
+              "text": "v1.0.0",
+              "slot": {"align_x": 1, "align_y": 1, "offset_x": -100, "offset_y": -50}
+            }
+          ]
+        }
+      },
+
+      "event_graph": {
+        "OnLoginClicked": {
+          "node": "CustomEvent",
+          "description": "登录按钮点击事件",
+          "logic": [
+            {"node": "Get UsernameInput", "pin": "Text"},
+            {"node": "Get PasswordInput", "pin": "Text"},
+            {"node": "Branch", "condition": "Username AND Password NOT empty"},
+            {"node": "If True", "subgraph": [
+              {"node": "Get PlayerController"},
+              {"node": "Call LoginPlayerName", "params": {"PlayerName": "Username"}},
+              {"node": "OpenLevel", "params": {"LevelName": "Lobby"}}
+            ]},
+            {"node": "If False", "subgraph": [
+              {"node": "Set ErrorText", "params": {"text": "请输入用户名和密码"}}
+            ]}
+          ]
+        },
+        "OnRegisterClicked": {
+          "node": "CustomEvent",
+          "description": "注册按钮点击事件",
+          "logic": [
+            {"node": "Show ErrorText", "params": {"text": "注册功能开发中..."}}
+          ]
+        }
+      },
+
+      "bindings": {
+        "LoginButton": "OnClicked",
+        "RegisterButton": "OnClicked"
+      }
+    },
+
+    "Lobby_WBP": {
+      "class_name": "WBP_Lobby",
+      "parent_class": "LobbyWidgetBase",
+      "header_path": "Gameplay/UI/LobbyWidgetBase.h",
+      "blueprint_path": "/Game/Mahjong/Blueprint/UI/WBP_Lobby",
+      "category": "Mahjong|UI|Lobby",
+
+      "widget_tree": {
+        "RootCanvas": {
+          "type": "CanvasPanel",
+          "anchors": {"min_x": 0, "min_y": 0, "max_x": 1, "max_y": 1},
+          "children": [
+            {
+              "name": "BackgroundImage",
+              "type": "Image",
+              "slot": {"align_x": 0, "align_y": 0, "offset_x": 0, "offset_y": 0, "size_x": 1.0, "size_y": 1.0}
+            },
+            {
+              "name": "TopBar",
+              "type": "HorizontalBox",
+              "slot": {"align_x": 0, "align_y": 0, "offset_x": 20, "offset_y": 20, "size_x": 1.0, "size_y": 60},
+              "children": [
+                {"name": "PlayerInfoBox", "type": "VerticalBox", "children": [
+                  {"name": "PlayerNameText", "type": "TextBlock", "text": "玩家: -"},
+                  {"name": "CoinsText", "type": "TextBlock", "text": "金币: 1000"}
+                ]},
+                {"name": "Spacer", "type": "Spacer", "size": {"x": 100, "y": 10}},
+                {"name": "SettingsButton", "type": "Button", "content": "设置"},
+                {"name": "LogoutButton", "type": "Button", "content": "退出"}
+              ]
+            },
+            {
+              "name": "MainContent",
+              "type": "VerticalBox",
+              "slot": {"align_x": 0.5, "align_y": 0.3, "offset_x": -300, "offset_y": 0, "size_x": 600, "size_y": 500},
+              "children": [
+                {"name": "TitleText", "type": "TextBlock", "text": "游戏大厅", "font_size": 32},
+                {"name": "Spacer1", "type": "Spacer", "size": {"x": 20, "y": 30}},
+                {
+                  "name": "RoomListSection",
+                  "type": "VerticalBox",
+                  "children": [
+                    {"name": "RoomListHeader", "type": "HorizontalBox", "children": [
+                      {"name": "RoomListTitle", "type": "TextBlock", "text": "房间列表"},
+                      {"name": "Spacer", "type": "Spacer", "size": {"x": 300, "y": 10}},
+                      {"name": "RefreshButton", "type": "Button", "content": "刷新"}
+                    ]},
+                    {"name": "RoomScrollBox", "type": "ScrollBox", "height": 250},
+                    {"name": "RoomListView", "type": "ListView", "item_class": "WBP_RoomListEntry"}
+                  ]
+                },
+                {"name": "Spacer2", "type": "Spacer", "size": {"x": 20, "y": 20}},
+                {
+                  "name": "ButtonBox",
+                  "type": "HorizontalBox",
+                  "children": [
+                    {"name": "CreateRoomButton", "type": "Button", "content": "创建房间"},
+                    {"name": "JoinRoomButton", "type": "Button", "content": "加入房间"},
+                    {"name": "QuickStartButton", "type": "Button", "content": "快速开始"}
+                  ]
+                },
+                {"name": "StatusText", "type": "TextBlock", "text": ""}
+              ]
+            }
+          ]
+        }
+      },
+
+      "event_graph": {
+        "OnCreateRoomClicked": {
+          "node": "CustomEvent",
+          "description": "创建房间",
+          "logic": [
+            {"node": "Show CreateRoom Dialog"},
+            {"node": "Call CreateRoom on GameInstance"}
+          ]
+        },
+        "OnJoinRoomClicked": {
+          "node": "CustomEvent",
+          "description": "加入房间",
+          "params": [{"name": "RoomID", "type": "int32"}],
+          "logic": [
+            {"node": "Call JoinRoom on GameInstance", "params": {"RoomID": "RoomID"}},
+            {"node": "OpenLevel", "params": {"LevelName": "Room"}}
+          ]
+        },
+        "OnRefreshClicked": {
+          "node": "CustomEvent",
+          "description": "刷新房间列表",
+          "logic": [
+            {"node": "Clear RoomListView"},
+            {"node": "Get Room List from Server"},
+            {"node": "For Each Room", "subgraph": [
+              {"node": "Create WBP_RoomListEntry"},
+              {"node": "Setup Entry with Room Info"},
+              {"node": "Add to RoomListView"}
+            ]}
+          ]
+        },
+        "OnLogoutClicked": {
+          "node": "CustomEvent",
+          "description": "退出登录",
+          "logic": [
+            {"node": "Call Logout on AccountService"},
+            {"node": "OpenLevel", "params": {"LevelName": "Login"}}
+          ]
+        }
+      },
+
+      "bindings": {
+        "CreateRoomButton": "OnClicked",
+        "JoinRoomButton": "OnClicked",
+        "RefreshButton": "OnClicked",
+        "LogoutButton": "OnClicked"
+      }
+    },
+
+    "Room_WBP": {
+      "class_name": "WBP_Room",
+      "parent_class": "RoomWidgetBase",
+      "header_path": "Gameplay/UI/RoomWidgetBase.h",
+      "blueprint_path": "/Game/Mahjong/Blueprint/UI/WBP_Room",
+      "category": "Mahjong|UI|Room",
+
+      "widget_tree": {
+        "RootCanvas": {
+          "type": "CanvasPanel",
+          "anchors": {"min_x": 0, "min_y": 0, "max_x": 1, "max_y": 1},
+          "children": [
+            {
+              "name": "TableBackground",
+              "type": "Image",
+              "slot": {"align_x": 0, "align_y": 0, "offset_x": 0, "offset_y": 0, "size_x": 1.0, "size_y": 1.0}
+            },
+            {
+              "name": "TopBar",
+              "type": "HorizontalBox",
+              "slot": {"align_x": 0, "align_y": 0, "offset_x": 20, "offset_y": 20, "size_x": 1.0, "size_y": 50},
+              "children": [
+                {"name": "RoomInfoText", "type": "TextBlock", "text": "房间 #0000"},
+                {"name": "Spacer", "type": "Spacer", "size": {"x": 100, "y": 10}},
+                {"name": "PlayerCountText", "type": "TextBlock", "text": "0/4 玩家"},
+                {"name": "Spacer2", "type": "Spacer", "size": {"x": 100, "y": 10}},
+                {"name": "LeaveButton", "type": "Button", "content": "离开"}
+              ]
+            },
+            {
+              "name": "PlayerSeats",
+              "type": "HorizontalBox",
+              "slot": {"align_x": 0.5, "align_y": 0.2, "offset_x": -300, "offset_y": 0, "size_x": 600, "size_y": 100},
+              "children": [
+                {"name": "Seat0", "type": "Image", "placeholder": "玩家1"},
+                {"name": "Seat1", "type": "Image", "placeholder": "玩家2"},
+                {"name": "Seat2", "type": "Image", "placeholder": "玩家3"},
+                {"name": "Seat3", "type": "Image", "placeholder": "玩家4"}
+              ]
+            },
+            {
+              "name": "GameArea",
+              "type": "CanvasPanel",
+              "slot": {"align_x": 0.5, "align_y": 0.5, "offset_x": -400, "offset_y": -200, "size_x": 800, "size_y": 400},
+              "children": [
+                {"name": "DiscardPool", "type": "WrapBox", "size": {"x": 600, "y": 150}},
+                {"name": "DrawButton", "type": "Button", "content": "摸牌"},
+                {"name": "DiscardButton", "type": "Button", "content": "出牌", "is_hidden": true}
+              ]
+            },
+            {
+              "name": "ActionButtons",
+              "type": "HorizontalBox",
+              "slot": {"align_x": 0.5, "align_y": 0.85, "offset_x": -200, "offset_y": 0, "size_x": 400, "size_y": 60},
+              "children": [
+                {"name": "PengButton", "type": "Button", "content": "碰", "is_hidden": true},
+                {"name": "GangButton", "type": "Button", "content": "杠", "is_hidden": true},
+                {"name": "HuButton", "type": "Button", "content": "胡", "is_hidden": true},
+                {"name": "GuoButton", "type": "Button", "content": "过", "is_hidden": true}
+              ]
+            },
+            {
+              "name": "StatusText",
+              "type": "TextBlock",
+              "slot": {"align_x": 0.5, "align_y": 1, "offset_x": 0, "offset_y": -80}
+            }
+          ]
+        }
+      },
+
+      "event_graph": {
+        "OnLeaveClicked": {
+          "node": "CustomEvent",
+          "description": "离开房间",
+          "logic": [
+            {"node": "Call LeaveRoom on GameMode"},
+            {"node": "OpenLevel", "params": {"LevelName": "Lobby"}}
+          ]
+        },
+        "OnStartGameClicked": {
+          "node": "CustomEvent",
+          "description": "开始游戏（房主）",
+          "logic": [
+            {"node": "Call StartGame on GameMode"},
+            {"node": "Set StatusText", "params": {"text": "等待其他玩家..."}}
+          ]
+        },
+        "OnDrawTileClicked": {
+          "node": "CustomEvent",
+          "description": "摸牌",
+          "logic": [
+            {"node": "Call DrawTile on PlayerController"},
+            {"node": "Hide DrawButton"},
+            {"node": "Show DiscardButton"}
+          ]
+        },
+        "OnDiscardTileClicked": {
+          "node": "CustomEvent",
+          "description": "出牌",
+          "logic": [
+            {"node": "Get Selected Tile Index"},
+            {"node": "Call DiscardTile on PlayerController"},
+            {"node": "Hide DiscardButton"},
+            {"node": "Set StatusText", "params": {"text": "等待其他玩家..."}}
+          ]
+        }
+      },
+
+      "bindings": {
+        "LeaveButton": "OnClicked",
+        "StartGameButton": "OnClicked",
+        "DrawTileButton": "OnClicked",
+        "DiscardButton": "OnClicked"
+      }
+    },
+
+    "GameHUD_WBP": {
+      "class_name": "WBP_GameHUD",
+      "parent_class": "HUDWidgetBase",
+      "header_path": "Gameplay/UI/HUDWidgetBase.h",
+      "blueprint_path": "/Game/Mahjong/Blueprint/UI/WBP_GameHUD",
+      "category": "Mahjong|UI|GameHUD",
+
+      "widget_tree": {
+        "HUDPanel": {
+          "type": "CanvasPanel",
+          "children": [
+            {
+              "name": "TopBar",
+              "type": "HorizontalBox",
+              "slot": {"align_x": 0, "align_y": 0, "size_x": 1.0, "size_y": 50},
+              "children": [
+                {"name": "TimerText", "type": "TextBlock", "text": "60"},
+                {"name": "TimerProgressBar", "type": "ProgressBar", "percent": 1.0},
+                {"name": "TileCountText", "type": "TextBlock", "text": "牌数: 144"},
+                {"name": "MyScoreText", "type": "TextBlock", "text": "分数: 0"},
+                {"name": "ConnectionStatusText", "type": "TextBlock", "text": "已连接"}
+              ]
+            },
+            {
+              "name": "TurnIndicatorText",
+              "type": "TextBlock",
+              "slot": {"align_x": 0.5, "align_y": 0.1},
+              "text": ""
+            },
+            {
+              "name": "ActionPromptText",
+              "type": "TextBlock",
+              "slot": {"align_x": 0.5, "align_y": 0.2},
+              "text": "",
+              "visibility": "Collapsed"
+            },
+            {
+              "name": "PlayerInfoBox",
+              "type": "HorizontalBox",
+              "slot": {"align_x": 0, "align_y": 1, "size_x": 1.0, "size_y": 80},
+              "children": [
+                {"name": "PlayerName", "type": "TextBlock"},
+                {"name": "PlayerScore", "type": "TextBlock"},
+                {"name": "PlayerState", "type": "TextBlock"}
+              ]
+            },
+            {
+              "name": "PauseMenuPanel",
+              "type": "CanvasPanel",
+              "visibility": "Collapsed",
+              "children": [
+                {"name": "ResumeButton", "type": "Button", "content": "继续"},
+                {"name": "SettingsButton", "type": "Button", "content": "设置"},
+                {"name": "QuitButton", "type": "Button", "content": "退出"}
+              ]
+            }
+          ]
+        }
+      },
+
+      "event_graph": {
+        "UpdateTimer": {
+          "node": "Function",
+          "params": [{"name": "Seconds", "type": "int32"}],
+          "logic": [
+            {"node": "Set TimerText", "params": {"text": "Seconds"}},
+            {"node": "Set TimerProgressBar", "params": {"percent": "Seconds / MaxTimerSeconds"}}
+          ]
+        },
+        "SetTurnIndicator": {
+          "node": "Function",
+          "params": [{"name": "PlayerIndex", "type": "int32"}, {"name": "bIsMyTurn", "type": "bool"}],
+          "logic": [
+            {"node": "If bIsMyTurn", "subgraph": [
+              {"node": "Set TurnIndicatorText", "params": {"text": ">>> 你的回合 <<<"}}
+            ]},
+            {"node": "Else", "subgraph": [
+              {"node": "Set TurnIndicatorText", "params": {"text": "玩家 PlayerIndex 的回合"}}
+            ]}
+          ]
+        },
+        "ShowActionPrompt": {
+          "node": "Function",
+          "params": [{"name": "ActionText", "type": "FString"}],
+          "logic": [
+            {"node": "Set ActionPromptText", "params": {"text": "ActionText"}},
+            {"node": "Set ActionPromptText Visibility", "params": {"visibility": "Visible"}}
+          ]
+        }
+      }
+    },
+
+    "RoomListEntry_WBP": {
+      "class_name": "WBP_RoomListEntry",
+      "parent_class": "UserWidget",
+      "blueprint_path": "/Game/Mahjong/Blueprint/UI/WBP_RoomListEntry",
+      "category": "Mahjong|UI|Entry",
+
+      "widget_tree": {
+        "RootCanvas": {
+          "type": "CanvasPanel",
+          "children": [
+            {"name": "RoomNameText", "type": "TextBlock"},
+            {"name": "RoomIDText", "type": "TextBlock"},
+            {"name": "PlayerCountText", "type": "TextBlock"},
+            {"name": "JoinRoomButton", "type": "Button", "content": "加入"}
+          ]
+        }
+      },
+
+      "functions": {
+        "SetupRoomEntry": {
+          "params": [{"name": "RoomName", "type": "FString"}, {"name": "RoomID", "type": "int32"}, {"name": "CurrentPlayers", "type": "int32"}, {"name": "MaxPlayers", "type": "int32"}],
+          "logic": [
+            {"node": "Set RoomNameText", "params": {"text": "RoomName"}},
+            {"node": "Set RoomIDText", "params": {"text": "RoomID"}},
+            {"node": "Set PlayerCountText", "params": {"text": "CurrentPlayers/MaxPlayers"}}
+          ]
+        }
+      },
+
+      "bindings": {
+        "JoinRoomButton": "OnClicked"
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "LevelConfig": {
+    "description": "贵阳麻将关卡和游戏模式配置",
+
+    "LevelFlow": {
+      "Login": {
+        "level_name": "Login",
+        "level_type": "Primary",
+        "game_mode": "LoginGameMode",
+        "hud_widget": "WBP_Login",
+        "player_controller": "LoginPlayerControllerBase",
+        "description": "登录界面"
+      },
+      "Lobby": {
+        "level_name": "Lobby",
+        "level_type": "Primary",
+        "game_mode": "LobbyGameMode",
+        "hud_widget": "WBP_Lobby",
+        "player_controller": "LobbyPlayerController",
+        "description": "游戏大厅"
+      },
+      "Room": {
+        "level_name": "Room",
+        "level_type": "Primary",
+        "game_mode": "RoomGameMode",
+        "hud_widget": "WBP_Room",
+        "player_controller": "RoomPlayerController",
+        "description": "房间界面"
+      },
+      "MahjongTable": {
+        "level_name": "MahjongTable",
+        "level_type": "Gameplay",
+        "game_mode": "GuiyangGameMode",
+        "hud_widget": "WBP_GameHUD",
+        "game_widget": "WBP_GameWidget",
+        "player_controller": "GuiyangPlayerController",
+        "description": "麻将桌（游戏主界面）"
+      }
+    },
+
+    "GameModeConfig": {
+      "LoginGameMode": {
+        "class_name": "LoginGameMode",
+        "parent_class": "GameModeBase",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Modes/BP_LoginGameMode",
+        "properties": {
+          "LoginWidgetClass": "WBP_Login"
+        },
+        "description": "登录游戏模式"
+      },
+
+      "LobbyGameMode": {
+        "class_name": "LobbyGameMode",
+        "parent_class": "GameModeBase",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Modes/BP_LobbyGameMode",
+        "properties": {
+          "LobbyWidgetClass": "WBP_Lobby",
+          "MinPlayersToStart": 4,
+          "MaxPlayers": 4
+        },
+        "description": "大厅游戏模式"
+      },
+
+      "RoomGameMode": {
+        "class_name": "RoomGameMode",
+        "parent_class": "GameModeBase",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Modes/BP_RoomGameMode",
+        "properties": {
+          "RoomWidgetClass": "WBP_Room",
+          "MaxPlayers": 4,
+          "RoomCapacity": 4
+        },
+        "description": "房间游戏模式"
+      },
+
+      "GuiyangGameMode": {
+        "class_name": "GuiyangGameMode",
+        "parent_class": "AMahjongGameMode",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Modes/BP_GuiyangGameMode",
+        "properties": {
+          "GameWidgetClass": "WBP_GameWidget",
+          "HUDWidgetClass": "WBP_GameHUD",
+          "GameRulesClass": "BP_GuiyangGameRules",
+          "PlayerControllerClass": "BP_GuiyangPlayerController",
+          "PlayerStateClass": "BP_GuiyangPlayerState",
+          "GameStateClass": "BP_GuiyangGameState",
+          "PlayerCount": 4,
+          "InitialHandCount": 14
+        },
+        "description": "贵阳麻将游戏模式"
+      }
+    },
+
+    "PlayerControllerConfig": {
+      "LoginPlayerControllerBase": {
+        "class_name": "LoginPlayerController",
+        "parent_class": "PlayerController",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Game/BP_LoginPlayerController",
+        "description": "登录玩家控制器"
+      },
+
+      "LobbyPlayerController": {
+        "class_name": "LobbyPlayerController",
+        "parent_class": "PlayerController",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Game/BP_LobbyPlayerController",
+        "description": "大厅玩家控制器"
+      },
+
+      "RoomPlayerController": {
+        "class_name": "RoomPlayerController",
+        "parent_class": "PlayerController",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Game/BP_RoomPlayerController",
+        "description": "房间玩家控制器"
+      },
+
+      "GuiyangPlayerController": {
+        "class_name": "GuiyangPlayerController",
+        "parent_class": "AMahjongPlayerController",
+        "blueprint_path": "/Game/Mahjong/Blueprint/Game/BP_GuiyangPlayerController",
+        "parent_header": "Gameplay/Game/MahjongPlayerController.h",
+        "description": "贵阳麻将玩家控制器"
+      }
+    },
+
+    "PlayerStateConfig": {
+      "GuiyangPlayerState": {
+        "class_name": "GuiyangPlayerState",
+        "parent_class": "AMahjongPlayerStateBase",
+        "blueprint_path": "/Game/Mahjong/Blueprint/PlayerState/BP_GuiyangPlayerState",
+        "parent_header": "Core/PlayerState/AMahjongPlayerStateBase.h",
+        "description": "贵阳麻将玩家状态"
+      }
+    },
+
+    "GameStateConfig": {
+      "GuiyangGameState": {
+        "class_name": "GuiyangGameState",
+        "parent_class": "AMahjongGameStateBase",
+        "blueprint_path": "/Game/Mahjong/Blueprint/GameState/BP_GuiyangGameState",
+        "parent_header": "Core/GameState/AMahjongGameStateBase.h",
+        "description": "贵阳麻将游戏状态"
+      }
+    },
+
+    "LevelSettings": {
+      "Login": {
+        "WorldSettings": {
+          "GameMode": "LoginGameMode",
+          "DefaultPawnClass": "None",
+          "PlayerControllerClass": "LoginPlayerController"
+        },
+        "Networking": {
+          "NetMode": "Standalone",
+          "IsServer": true
+        }
+      },
+      "Lobby": {
+        "WorldSettings": {
+          "GameMode": "LobbyGameMode",
+          "DefaultPawnClass": "None",
+          "PlayerControllerClass": "LobbyPlayerController"
+        },
+        "Networking": {
+          "NetMode": "ListenServer",
+          "IsServer": true,
+          "MaxPlayers": 4
+        }
+      },
+      "Room": {
+        "WorldSettings": {
+          "GameMode": "RoomGameMode",
+          "DefaultPawnClass": "None",
+          "PlayerControllerClass": "RoomPlayerController"
+        },
+        "Networking": {
+          "NetMode": "ListenServer",
+          "IsServer": true,
+          "MaxPlayers": 4
+        }
+      },
+      "MahjongTable": {
+        "WorldSettings": {
+          "GameMode": "GuiyangGameMode",
+          "DefaultPawnClass": "None",
+          "PlayerControllerClass": "GuiyangPlayerController"
+        },
+        "Networking": {
+          "NetMode": "ListenServer",
+          "IsServer": true,
+          "MaxPlayers": 4
+        }
+      }
+    }
+  }
+}

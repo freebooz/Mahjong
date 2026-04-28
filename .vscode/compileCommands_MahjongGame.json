@@ -1,0 +1,834 @@
+[
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\MahjongGame.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\MahjongGame.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\MahjongGame.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Account\\PlayerAccountService.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\GameState\\AMahjongGameStateBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongGameHUD.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongGameInstance.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongGameStateBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongGameTable.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongPlayerControllerBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongPlayerStateBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongTableActor.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongTableMesh.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongTileActor.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\MahjongTileMesh.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\PlayerController\\AMahjongPlayerControllerBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\PlayerState\\AMahjongPlayerStateBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Core\\UI\\UGameWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\Components\\UTilePoolComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\Components\\UTurnComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\Modes\\AMahjongGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\Rules\\UMahjongGameRules.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\GameWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\HUDWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\LobbyWidget.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\LobbyWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\LoginWidget.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\LoginWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\MahjongGameWidget.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\RoomWidget.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\RoomWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Gameplay\\UI\\SettingsWidgetBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\LobbyGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\MahjongLobbyGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\MahjongLobbyGameState.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\MahjongLobbyHUD.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\MahjongLobbyPlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\MahjongLobbyWidget.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Lobby\\MahjongRoomListEntry.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Login\\LoginGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Login\\LoginGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Login\\LoginPlayerControllerBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Network\\NetworkManager.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Room\\RoomGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Room\\RoomGameModeBase.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Utils\\MahjongAudioManager.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Utils\\MahjongConstants.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Utils\\MahjongTileData.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Private\\Variants\\Guiyang\\Rules\\UBP_GuiyangGameRules.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Account\\PlayerAccountService.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\GameState\\AMahjongGameStateBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Interfaces\\IMahjongGameRules.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Interfaces\\IMahjongPlayer.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongGameHUD.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongGameInstance.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongGameStateBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongGameTable.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongPlayerControllerBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongPlayerStateBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongTableActor.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongTableMesh.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongTileActor.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\MahjongTileMesh.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\PlayerController\\AMahjongPlayerControllerBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\PlayerState\\AMahjongPlayerStateBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Types\\ETileSuit.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Types\\FGameContext.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Types\\FGenericHand.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Types\\FGenericTile.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\Types\\MahjongEnums.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Core\\UI\\UGameWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Components\\UTilePoolComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Components\\UTurnComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\LobbyGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\MahjongLobbyGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\MahjongLobbyGameState.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\MahjongLobbyHUD.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\MahjongLobbyPlayerController.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\MahjongLobbyWidget.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Lobby\\MahjongRoomListEntry.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Login\\LoginGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Login\\LoginGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Login\\LoginPlayerControllerBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Modes\\AMahjongGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Room\\RoomGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Room\\RoomGameModeBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\Rules\\UMahjongGameRules.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\GameWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\HUDWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\LobbyWidget.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\LobbyWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\LoginWidget.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\LoginWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\MahjongGameWidget.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\RoomWidget.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\RoomWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Gameplay\\UI\\SettingsWidgetBase.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Network\\NetworkManager.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Utils\\MahjongAudioManager.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Utils\\MahjongConstants.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Utils\\MahjongTileData.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "H:\\MahjongGame\\Source\\MahjongGame\\Public\\Variants\\Guiyang\\Rules\\UBP_GuiyangGameRules.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@H:\\MahjongGame\\.vscode\\compileCommands_MahjongGame\\MahjongGame.1.rsp"
+		],
+		"directory": "D:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Source"
+	}
+]

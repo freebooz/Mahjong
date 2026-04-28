@@ -1,0 +1,11 @@
+<!-- HU 按钮 -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="64" viewBox="0 0 128 64">
+  <defs>
+    <linearGradient id="btn_hu_gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E74C3C"/>
+      <stop offset="100%" style="stop-color:#E74C3C" style="stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="64" fill="url(#btn_hu_gradient)" stroke="#000000" stroke-width="2" rx="8"/>
+  <text x="64" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">HU</text>
+</svg>

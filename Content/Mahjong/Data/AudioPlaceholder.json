@@ -1,0 +1,307 @@
+{
+  "AudioPlaceholders": {
+    "description": "音频占位符配置 - 定义所需音效文件规格",
+    "total_files": 28,
+
+    "SFX_Tiles": {
+      "path": "Audio/SFX/Tiles/",
+      "files": [
+        {
+          "name": "tile_draw_1.wav",
+          "description": "摸牌音效变体1",
+          "duration_sec": 0.15,
+          "type": "click",
+          "pitch_range": [0.95, 1.05],
+          "color": "soft",
+          "spec": "44.1kHz, 16bit, mono, <50KB"
+        },
+        {
+          "name": "tile_draw_2.wav",
+          "description": "摸牌音效变体2",
+          "duration_sec": 0.18,
+          "type": "click",
+          "pitch_range": [0.95, 1.05],
+          "color": "soft",
+          "spec": "44.1kHz, 16bit, mono, <50KB"
+        },
+        {
+          "name": "tile_draw_3.wav",
+          "description": "摸牌音效变体3",
+          "duration_sec": 0.12,
+          "type": "click",
+          "pitch_range": [0.95, 1.05],
+          "color": "soft",
+          "spec": "44.1kHz, 16bit, mono, <50KB"
+        }
+      ]
+    },
+
+    "SFX_Actions": {
+      "path": "Audio/SFX/Actions/",
+      "files": [
+        {
+          "name": "action_peng.wav",
+          "description": "碰牌音效",
+          "duration_sec": 0.3,
+          "type": "impact",
+          "pitch": 1.0,
+          "color": "sharp",
+          "spec": "44.1kHz, 16bit, mono, ~100KB"
+        },
+        {
+          "name": "action_gang.wav",
+          "description": "杠牌音效",
+          "duration_sec": 0.4,
+          "type": "impact",
+          "pitch": 1.0,
+          "color": "loud",
+          "spec": "44.1kHz, 16bit, mono, ~150KB"
+        },
+        {
+          "name": "action_hu.wav",
+          "description": "胡牌音效",
+          "duration_sec": 1.5,
+          "type": "celebration",
+          "pitch": 1.0,
+          "color": "victory",
+          "spec": "44.1kHz, 16bit, stereo, ~500KB"
+        },
+        {
+          "name": "action_chow.wav",
+          "description": "吃牌音效",
+          "duration_sec": 0.25,
+          "type": "slide",
+          "pitch": 1.0,
+          "color": "smooth",
+          "spec": "44.1kHz, 16bit, mono, ~80KB"
+        },
+        {
+          "name": "action_discard.wav",
+          "description": "出牌音效",
+          "duration_sec": 0.2,
+          "type": "drop",
+          "pitch": 1.0,
+          "color": "solid",
+          "spec": "44.1kHz, 16bit, mono, ~70KB"
+        },
+        {
+          "name": "action_ting.wav",
+          "description": "报听音效",
+          "duration_sec": 0.5,
+          "type": "announce",
+          "pitch": 1.0,
+          "color": "alert",
+          "spec": "44.1kHz, 16bit, mono, ~150KB"
+        }
+      ]
+    },
+
+    "SFX_Special": {
+      "path": "Audio/SFX/Special/",
+      "files": [
+        {
+          "name": "chicken_call.wav",
+          "description": "鸡叫音效 - 翻到鸡时",
+          "duration_sec": 0.8,
+          "type": "animal",
+          "pitch": 1.0,
+          "color": "fun",
+          "spec": "44.1kHz, 16bit, mono, ~200KB"
+        },
+        {
+          "name": "ji_player.wav",
+          "description": "鸡胡音效 - 捉鸡成功",
+          "duration_sec": 1.0,
+          "type": "celebration",
+          "pitch": 1.0,
+          "color": "excited",
+          "spec": "44.1kHz, 16bit, stereo, ~400KB"
+        },
+        {
+          "name": "golden_ji.wav",
+          "description": "金鸡音效 - 金鸡特效",
+          "duration_sec": 1.2,
+          "type": "special",
+          "pitch": 1.0,
+          "color": "golden",
+          "spec": "44.1kHz, 16bit, stereo, ~500KB"
+        },
+        {
+          "name": "zhuanwan_dou.wav",
+          "description": "转弯豆音效",
+          "duration_sec": 0.6,
+          "type": "special",
+          "pitch": 1.0,
+          "color": "exciting",
+          "spec": "44.1kHz, 16bit, mono, ~200KB"
+        },
+        {
+          "name": "mindou.wav",
+          "description": "闷豆音效 - 暗杠",
+          "duration_sec": 0.5,
+          "type": "hidden",
+          "pitch": 1.0,
+          "color": "mysterious",
+          "spec": "44.1kHz, 16bit, mono, ~150KB"
+        },
+        {
+          "name": "diandou.wav",
+          "description": "点豆音效 - 点杠",
+          "duration_sec": 0.7,
+          "type": "point",
+          "pitch": 1.0,
+          "color": "pointed",
+          "spec": "44.1kHz, 16bit, mono, ~250KB"
+        },
+        {
+          "name": "game_start.wav",
+          "description": "游戏开始音效",
+          "duration_sec": 2.0,
+          "type": "announcement",
+          "pitch": 1.0,
+          "color": "grand",
+          "spec": "44.1kHz, 16bit, stereo, ~800KB"
+        },
+        {
+          "name": "game_end.wav",
+          "description": "游戏结束音效",
+          "duration_sec": 3.0,
+          "type": "finale",
+          "pitch": 1.0,
+          "color": "grand",
+          "spec": "44.1kHz, 16bit, stereo, ~1.2MB"
+        }
+      ]
+    },
+
+    "SFX_UI": {
+      "path": "Audio/SFX/UI/",
+      "files": [
+        {
+          "name": "btn_click.wav",
+          "description": "按钮点击音效",
+          "duration_sec": 0.1,
+          "type": "click",
+          "pitch": 1.0,
+          "color": "soft",
+          "spec": "44.1kHz, 16bit, mono, <30KB"
+        },
+        {
+          "name": "btn_hover.wav",
+          "description": "按钮悬停音效",
+          "duration_sec": 0.08,
+          "type": "hover",
+          "pitch": 1.0,
+          "color": "subtle",
+          "spec": "44.1kHz, 16bit, mono, <25KB"
+        },
+        {
+          "name": "btn_open.wav",
+          "description": "界面打开音效",
+          "duration_sec": 0.3,
+          "type": "whoosh",
+          "pitch": 1.0,
+          "color": "smooth",
+          "spec": "44.1kHz, 16bit, mono, ~100KB"
+        },
+        {
+          "name": "btn_close.wav",
+          "description": "界面关闭音效",
+          "duration_sec": 0.25,
+          "type": "whoosh",
+          "pitch": 1.0,
+          "color": "smooth",
+          "spec": "44.1kHz, 16bit, mono, ~80KB"
+        },
+        {
+          "name": "notification.wav",
+          "description": "通知提示音",
+          "duration_sec": 0.5,
+          "type": "alert",
+          "pitch": 1.0,
+          "color": "clear",
+          "spec": "44.1kHz, 16bit, mono, ~150KB"
+        },
+        {
+          "name": "error.wav",
+          "description": "错误提示音",
+          "duration_sec": 0.4,
+          "type": "error",
+          "pitch": 1.0,
+          "color": "harsh",
+          "spec": "44.1kHz, 16bit, mono, ~120KB"
+        },
+        {
+          "name": "success.wav",
+          "description": "成功提示音",
+          "duration_sec": 0.6,
+          "type": "positive",
+          "pitch": 1.0,
+          "color": "bright",
+          "spec": "44.1kHz, 16bit, mono, ~180KB"
+        }
+      ]
+    },
+
+    "BGM": {
+      "path": "Audio/BGM/",
+      "files": [
+        {
+          "name": "bgm_lobby.wav",
+          "description": "大厅背景音乐",
+          "duration_sec": 180,
+          "type": "loop",
+          "bpm": 90,
+          "color": "calm",
+          "spec": "44.1kHz, 16bit, stereo, ~15MB"
+        },
+        {
+          "name": "bgm_game.wav",
+          "description": "游戏背景音乐",
+          "duration_sec": 240,
+          "type": "loop",
+          "bpm": 100,
+          "color": "intense",
+          "spec": "44.1kHz, 16bit, stereo, ~20MB"
+        },
+        {
+          "name": "bgm_guiyang.wav",
+          "description": "贵阳风格背景音乐",
+          "duration_sec": 200,
+          "type": "loop",
+          "bpm": 95,
+          "color": "local",
+          "spec": "44.1kHz, 16bit, stereo, ~18MB"
+        },
+        {
+          "name": "bgm_login.wav",
+          "description": "登录界面音乐",
+          "duration_sec": 120,
+          "type": "loop",
+          "bpm": 80,
+          "color": "peaceful",
+          "spec": "44.1kHz, 16bit, stereo, ~10MB"
+        }
+      ]
+    }
+  },
+
+  "audio_sources": {
+    "free_sound_effects": [
+      "freesound.org - search 'mahjong', 'dice', 'click'",
+      "freesound.org - search 'chicken', 'bird' for chicken sounds",
+      "freesound.org - search 'chinese music' for BGM"
+    ],
+    "bgm_sources": [
+      "freemusicarchive.org",
+      "incompetech.com",
+      "bensound.com (requires attribution)"
+    ]
+  },
+
+  "tools": {
+    "conversion": "ffmpeg -i input.wav -ar 44100 -ac 2 output.wav",
+    "compression": "oggenc input.wav -q 5 -o output.ogg",
+    "trim": "ffmpeg -i input.wav -ss 00:00:00 -t 00:00:01 -c copy output.wav"
+  }
+}
