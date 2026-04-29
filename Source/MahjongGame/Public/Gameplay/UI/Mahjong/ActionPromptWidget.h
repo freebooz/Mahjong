@@ -12,53 +12,51 @@
 // 显示吃、碰、杠、胡、摸牌、出牌等动作按钮
 // 支持倒计时显示
 //==============================================================================
+USTRUCT(BlueprintType)
+struct FAvailableGameActions
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    bool bCanChow;
+
+    UPROPERTY()
+    bool bCanPong;
+
+    UPROPERTY()
+    bool bCanKong;
+
+    UPROPERTY()
+    bool bCanHu;
+
+    UPROPERTY()
+    bool bCanDraw;
+
+    UPROPERTY()
+    bool bCanDiscard;
+
+    UPROPERTY()
+    bool bCanSkip;
+};
+
+UENUM(BlueprintType)
+enum class EActionType : uint8
+{
+    Chow,
+    Pong,
+    Kong,
+    Hu,
+    Draw,
+    Discard,
+    Skip
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UActionPromptWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 可用动作
-    USTRUCT(BlueprintType)
-    struct FAvailableActions
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        bool bCanChow;
-
-        UPROPERTY()
-        bool bCanPong;
-
-        UPROPERTY()
-        bool bCanKong;
-
-        UPROPERTY()
-        bool bCanHu;
-
-        UPROPERTY()
-        bool bCanDraw;
-
-        UPROPERTY()
-        bool bCanDiscard;
-
-        UPROPERTY()
-        bool bCanSkip;
-    };
-
-    // 动作类型
-    UENUM(BlueprintType)
-    enum class EActionType : uint8
-    {
-        Chow,
-        Pong,
-        Kong,
-        Hu,
-        Draw,
-        Discard,
-        Skip
-    };
-
     // 动作回调
     DECLARE_DELEGATE_OneParam(FOnActionSelected, EActionType)
 
@@ -67,7 +65,7 @@ public:
 
     // 显示可用动作
     UFUNCTION(BlueprintCallable, Category="Mahjong|Action")
-    void ShowActions(const FAvailableActions& Actions, float CountdownTime = 0.0f);
+    void ShowActions(const FAvailableGameActions& Actions, float CountdownTime = 0.0f);
 
     // 隐藏动作提示
     UFUNCTION(BlueprintCallable, Category="Mahjong|Action")
@@ -156,7 +154,7 @@ protected:
 
     // 当前可用动作
     UPROPERTY()
-    FAvailableActions CurrentActions;
+    FAvailableGameActions CurrentActions;
 
     // 动作回调
     FOnActionSelected ActionCallback;

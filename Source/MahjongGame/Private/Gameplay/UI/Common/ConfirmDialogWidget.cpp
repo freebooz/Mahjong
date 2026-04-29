@@ -18,9 +18,6 @@ void UConfirmDialogWidget::NativeConstruct()
     if (CancelButton)
         CancelButton->OnClicked.AddDynamic(this, &UConfirmDialogWidget::OnCancelClicked);
 
-    if (BackgroundOverlay)
-        BackgroundOverlay->OnClicked.AddDynamic(this, &UConfirmDialogWidget::OnBackgroundClicked);
-
     HideDialog();
 }
 

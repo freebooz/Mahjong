@@ -3,4 +3,5 @@
   <ProjectFileGenerator>
     <Format>VisualStudio</Format>
   </ProjectFileGenerator>
+  <bInferUnityBuildFromGUBP>false</bInferUnityBuildFromGUBP>
 </Configuration>

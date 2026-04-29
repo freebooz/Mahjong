@@ -12,40 +12,39 @@
 // 麻将专用层 - 游戏结算界面
 // 显示游戏结算信息，包括排名、得分、胡牌类型等
 //==============================================================================
+USTRUCT(BlueprintType)
+struct FPlayerSettlement
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    FString PlayerName;
+
+    UPROPERTY()
+    int32 PlayerRank;
+
+    UPROPERTY()
+    int32 TotalScore;
+
+    UPROPERTY()
+    int32 HuType;
+
+    UPROPERTY()
+    int32 FanCount;
+
+    UPROPERTY()
+    bool bIsWinner;
+
+    UPROPERTY()
+    bool bIsSelfHu;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UGameSettlementWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 玩家结算数据
-    USTRUCT(BlueprintType)
-    struct FPlayerSettlement
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        FString PlayerName;
-
-        UPROPERTY()
-        int32 PlayerRank;
-
-        UPROPERTY()
-        int32 TotalScore;
-
-        UPROPERTY()
-        int32 HuType;
-
-        UPROPERTY()
-        int32 FanCount;
-
-        UPROPERTY()
-        bool bIsWinner;
-
-        UPROPERTY()
-        bool bIsSelfHu;
-    };
-
     // 构造函数
     UGameSettlementWidget(const FObjectInitializer& ObjectInitializer);
 

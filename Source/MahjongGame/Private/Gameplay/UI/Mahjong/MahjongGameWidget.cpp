@@ -42,7 +42,7 @@ void UMahjongGameWidget::UpdateDiscardTiles()
 {
 }
 
-void UMahjongGameWidget::UpdatePlayerInfo(int32 PlayerID, const FPlayerInfo& Info)
+void UMahjongGameWidget::UpdatePlayerInfo(int32 PlayerID, const FPlayerInfoData& Info)
 {
     UPlayerInfoWidget* PlayerWidget = nullptr;
 
@@ -58,7 +58,7 @@ void UMahjongGameWidget::UpdatePlayerInfo(int32 PlayerID, const FPlayerInfo& Inf
         PlayerWidget->SetPlayerInfo(Info);
 }
 
-void UMahjongGameWidget::ShowActionPrompt(const FAvailableActions& Actions, float Countdown)
+void UMahjongGameWidget::ShowActionPrompt(const FAvailableGameActions& Actions, float Countdown)
 {
     if (ActionPrompt)
         ActionPrompt->ShowActions(Actions, Countdown);

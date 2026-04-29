@@ -82,7 +82,7 @@ public:
 
     // 背景遮罩
     UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
-    UCanvasPanel* BackgroundOverlay;
+    UCanvasPanel* DialogBackgroundOverlay;
 
 protected:
     // 确认回调

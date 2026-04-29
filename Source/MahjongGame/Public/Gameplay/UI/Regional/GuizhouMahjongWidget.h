@@ -11,30 +11,32 @@
 // 在通用麻将游戏界面上添加贵阳麻将特有功能
 // 特有功能：捉鸡、贵阳夏麻、特殊番型
 //==============================================================================
+
+// 贵阳麻将特有数据
+USTRUCT(BlueprintType)
+struct FGuizhouMahjongData
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    int32 ChickenTileValue;
+
+    UPROPERTY()
+    bool bChickenCaptured;
+
+    UPROPERTY()
+    int32 XiaMaValue;
+
+    UPROPERTY()
+    int32 XiaMaCount;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UGuizhouMahjongWidget : public UMahjongGameWidget
 {
     GENERATED_BODY()
 
 public:
-    // 贵阳麻将特有数据
-    USTRUCT(BlueprintType)
-    struct FGuizhouMahjongData
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        int32 ChickenTileValue;
-
-        UPROPERTY()
-        bool bChickenCaptured;
-
-        UPROPERTY()
-        int32 XiaMaValue;
-
-        UPROPERTY()
-        int32 XiaMaCount;
-    };
 
     // 构造函数
     UGuizhouMahjongWidget(const FObjectInitializer& ObjectInitializer);

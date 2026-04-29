@@ -14,7 +14,7 @@ void UBaseWidget::Hide()
     SetVisibility(ESlateVisibility::Collapsed);
 }
 
-bool UBaseWidget::IsVisible() const
+bool UBaseWidget::IsWidgetVisible() const
 {
     return bIsShowing;
 }
@@ -56,8 +56,6 @@ void UBaseWidget::SetBackgroundOpacity(float Opacity)
 {
     if (BackgroundImage)
     {
-        FSlateBrush Brush = BackgroundImage->GetBrush();
-        Brush.TintColor.A = Opacity;
-        BackgroundImage->SetBrush(Brush);
+        BackgroundImage->SetOpacity(Opacity);
     }
 }

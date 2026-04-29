@@ -9,42 +9,44 @@
 // 麻将专用层 - 单个麻将牌组件
 // 显示麻将牌，支持选中、禁用、高亮等状态
 //==============================================================================
+
+// 牌类型
+UENUM(BlueprintType)
+enum class ETileType : uint8
+{
+    Wan,      // 万
+    Tiao,     // 条
+    Tong,     // 筒
+    Feng,     // 风
+    Jian,     // 箭
+    Hua       // 花
+};
+
+// 牌数据结构
+USTRUCT(BlueprintType)
+struct FMahjongTile
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    int32 TileID;
+
+    UPROPERTY()
+    int32 TileValue;
+
+    UPROPERTY()
+    ETileType TileType;
+
+    UPROPERTY()
+    FString TileTexturePath;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UMahjongTileWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 牌类型
-    UENUM(BlueprintType)
-    enum class ETileType : uint8
-    {
-        Wan,      // 万
-        Tiao,     // 条
-        Tong,     // 筒
-        Feng,     // 风
-        Jian,     // 箭
-        Hua       // 花
-    };
-
-    // 牌数据结构
-    USTRUCT(BlueprintType)
-    struct FMahjongTile
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        int32 TileID;
-
-        UPROPERTY()
-        int32 TileValue;
-
-        UPROPERTY()
-        ETileType TileType;
-
-        UPROPERTY()
-        FString TileTexturePath;
-    };
 
     // 构造函数
     UMahjongTileWidget(const FObjectInitializer& ObjectInitializer);

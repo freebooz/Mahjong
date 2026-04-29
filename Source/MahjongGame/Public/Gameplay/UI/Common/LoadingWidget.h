@@ -61,7 +61,7 @@ protected:
 
     // 背景遮罩
     UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
-    UImage* BackgroundOverlay;
+    UImage* LoadingBackgroundOverlay;
 
     // 旋转角度
     UPROPERTY()

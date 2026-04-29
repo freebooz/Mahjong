@@ -4,34 +4,34 @@
 #include "Gameplay/UI/Mahjong/MahjongTileWidget.h"
 #include "Components/HorizontalBox.h"
 #include "Components/CanvasPanel.h"
+#include "Components/TextBlock.h"
 #include "HandTilesWidget.generated.h"
 
 //==============================================================================
 // 麻将专用层 - 手牌显示组件
 // 显示玩家手牌，支持摸牌、出牌、排序等操作
 //==============================================================================
+USTRUCT(BlueprintType)
+struct FHandTilesData
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    TArray<FMahjongTile> Tiles;
+
+    UPROPERTY()
+    int32 TileCount;
+
+    UPROPERTY()
+    bool bIsSorted;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UHandTilesWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 手牌数据结构
-    USTRUCT(BlueprintType)
-    struct FHandTilesData
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        TArray<FMahjongTile> Tiles;
-
-        UPROPERTY()
-        int32 TileCount;
-
-        UPROPERTY()
-        bool bIsSorted;
-    };
-
     // 构造函数
     UHandTilesWidget(const FObjectInitializer& ObjectInitializer);
 

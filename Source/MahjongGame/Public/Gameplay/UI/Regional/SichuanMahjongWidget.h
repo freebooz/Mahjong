@@ -11,27 +11,29 @@
 // 在通用麻将游戏界面上添加四川麻将特有功能
 // 特有功能：血战到底、叫牌、刮风下雨
 //==============================================================================
+
+// 四川麻将特有数据
+USTRUCT(BlueprintType)
+struct FSichuanMahjongData
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    int32 CalledTileValue;
+
+    UPROPERTY()
+    bool bIsBaoJiao;
+
+    UPROPERTY()
+    int32 WindRainBonus;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API USichuanMahjongWidget : public UMahjongGameWidget
 {
     GENERATED_BODY()
 
 public:
-    // 四川麻将特有数据
-    USTRUCT(BlueprintType)
-    struct FSichuanMahjongData
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        int32 CalledTileValue;
-
-        UPROPERTY()
-        bool bIsBaoJiao;
-
-        UPROPERTY()
-        int32 WindRainBonus;
-    };
 
     // 构造函数
     USichuanMahjongWidget(const FObjectInitializer& ObjectInitializer);

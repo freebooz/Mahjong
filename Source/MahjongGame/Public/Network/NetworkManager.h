@@ -81,7 +81,10 @@ public:
 
     // 开始重连流程
     UFUNCTION(BlueprintCallable, Category="Mahjong|Network")
-    void BeginReconnect(const FString& SessionToken);
+    void BeginReconnect();
+
+    // 待重连的会话令牌（用于跨线程传递）
+    FString PendingReconnectSessionToken;
 
     // 取消重连
     UFUNCTION(BlueprintCallable, Category="Mahjong|Network")
@@ -165,8 +168,6 @@ protected:
     float ReconnectDelaySeconds;
 
     FTimerHandle ReconnectTimerHandle;
-    UPROPERTY()
-    FTimerManager* TimerManager;
 
     // 消息队列配置
     UPROPERTY(EditAnywhere, Category="Mahjong|Network|MessageQueue")

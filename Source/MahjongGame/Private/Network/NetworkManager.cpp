@@ -30,7 +30,6 @@ UNetworkManager::UNetworkManager()
     ReconnectAttempts = 0;
     MaxReconnectAttempts = 5;
     ReconnectDelaySeconds = 1.0f;
-    TimerManager = nullptr;
     MaxQueueSize = 256;
     ClientSocket = nullptr;
     ReceiveThread = nullptr;
@@ -78,7 +77,12 @@ bool UNetworkManager::ConnectToServer(const FString& IP, int32 Port)
     // 解析服务器地址
     TSharedRef<FInternetAddr> RemoteAddress = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM)->CreateInternetAddr();
 
-    RemoteAddress->SetIp(*IP, RemoteAddress->GetPortType());
+    // 解析 IP 地址字符串
+    FIPv4Address IPv4Addr;
+    if (FIPv4Address::Parse(IP, IPv4Addr))
+    {
+        RemoteAddress->SetIp(static_cast<uint32>(IPv4Addr.Value));
+    }
     RemoteAddress->SetPort(Port);
 
     // 尝试连接
@@ -89,13 +93,10 @@ bool UNetworkManager::ConnectToServer(const FString& IP, int32 Port)
         UE_LOG(LogTemp, Log, TEXT("[Network] 连接成功！"));
 
         // 启动接收线程
+        // 注意: UNetworkManager 不能直接作为 FRunnable 使用，需要实现一个单独的 FRunnable 类
+        // 暂时禁用线程接收，依赖主线程轮询
         bShouldStopThread = false;
-        ReceiveThread = FRunnableThread::Create(this, TEXT("MahjongReceiveThread"), 8 * 1024, TPri_AboveNormal);
-
-        if (!ReceiveThread)
-        {
-            UE_LOG(LogTemp, Warning, TEXT("[Network] 无法创建接收线程，将使用轮询"));
-        }
+        UE_LOG(LogTemp, Warning, TEXT("[Network] 接收线程已禁用，使用主线程轮询模式"));;
 
         NetworkStatus = ENetworkStatus::Connected;
 
@@ -244,7 +245,8 @@ void UNetworkManager::ReceiveThreadLoop()
 
     while (!bShouldStopThread && ClientSocket && NetworkStatus == ENetworkStatus::Connected)
     {
-        if (ClientSocket->HasPendingData(100))  // 100ms 超时
+        uint32 PendingData = 0;
+        if (ClientSocket->HasPendingData(PendingData))  // 检查是否有数据
         {
             int32 BytesRead = 0;
 
@@ -300,8 +302,10 @@ void UNetworkManager::ReceiveThreadLoop()
         UE_LOG(LogTemp, Warning, TEXT("[Network] 连接意外断开"));
 
         // 在游戏线程中处理（因为接收线程不能直接操作 UObject）
+        // 注意：SessionToken 被保存到成员变量中供 BeginReconnect 使用
+        PendingReconnectSessionToken = SessionToken;
         FSimpleDelegateGraphTask::CreateAndDispatchWhenReady(
-            FSimpleDelegate::CreateUObject(this, &UNetworkManager::BeginReconnect, SessionToken),
+            FSimpleDelegate::CreateUObject(this, &UNetworkManager::BeginReconnect),
             TStatId(), nullptr, ENamedThreads::GameThread
         );
     }
@@ -325,7 +329,7 @@ void UNetworkManager::HandleConnectionResult(bool bSuccess)
 //==============================================================================
 // 开始重连流程
 //==============================================================================
-void UNetworkManager::BeginReconnect(const FString& InSessionToken)
+void UNetworkManager::BeginReconnect()
 {
     if (bIsReconnecting)
     {
@@ -333,7 +337,7 @@ void UNetworkManager::BeginReconnect(const FString& InSessionToken)
         return;
     }
 
-    SessionToken = InSessionToken;
+    SessionToken = PendingReconnectSessionToken;
     bIsReconnecting = true;
     ReconnectAttempts = 0;
     NetworkStatus = ENetworkStatus::Reconnecting;
@@ -356,9 +360,10 @@ void UNetworkManager::CancelReconnect()
     bIsReconnecting = false;
     ReconnectAttempts = 0;
 
-    if (TimerManager)
+    UWorld* World = GEngine->GetWorldFromContextObject(this, EGetWorldErrorMode::ReturnNull);
+    if (World)
     {
-        TimerManager->ClearTimer(ReconnectTimerHandle);
+        World->GetTimerManager().ClearTimer(ReconnectTimerHandle);
     }
 
     UE_LOG(LogTemp, Log, TEXT("[Network] 重连已取消"));
@@ -402,10 +407,8 @@ void UNetworkManager::AttemptReconnect()
     UWorld* World = GEngine->GetWorldFromContextObject(this, EGetWorldErrorMode::ReturnNull);
     if (World)
     {
-        TimerManager = &World->GetTimerManager();
-
         FTimerDelegate Delegate = FTimerDelegate::CreateUObject(this, &UNetworkManager::OnReconnectTimer);
-        TimerManager->SetTimer(ReconnectTimerHandle, Delegate, CurrentDelay, false);
+        World->GetTimerManager().SetTimer(ReconnectTimerHandle, Delegate, CurrentDelay, false);
     }
     else
     {

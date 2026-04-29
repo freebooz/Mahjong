@@ -4,6 +4,7 @@
 #include "Gameplay/UI/Mahjong/MahjongTileWidget.h"
 #include "Components/WrapBox.h"
 #include "Components/CanvasPanel.h"
+#include "Components/TextBlock.h"
 #include "DiscardTilesWidget.generated.h"
 
 //==============================================================================

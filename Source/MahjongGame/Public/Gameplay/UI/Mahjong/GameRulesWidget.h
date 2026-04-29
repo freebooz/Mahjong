@@ -12,25 +12,24 @@
 // 麻将专用层 - 游戏规则界面
 // 显示麻将游戏规则，支持多标签页分类
 //==============================================================================
+USTRUCT(BlueprintType)
+struct FRuleSection
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    FString Title;
+
+    UPROPERTY()
+    FString Content;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UGameRulesWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 规则章节
-    USTRUCT(BlueprintType)
-    struct FRuleSection
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        FString Title;
-
-        UPROPERTY()
-        FString Content;
-    };
-
     // 构造函数
     UGameRulesWidget(const FObjectInitializer& ObjectInitializer);
 

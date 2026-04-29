@@ -39,11 +39,11 @@ public:
 
     // 更新玩家信息
     UFUNCTION(BlueprintCallable, Category="Mahjong|Game")
-    void UpdatePlayerInfo(int32 PlayerID, const FPlayerInfo& Info);
+    void UpdatePlayerInfo(int32 PlayerID, const FPlayerInfoData& Info);
 
     // 显示动作提示
     UFUNCTION(BlueprintCallable, Category="Mahjong|Game")
-    void ShowActionPrompt(const FAvailableActions& Actions, float Countdown);
+    void ShowActionPrompt(const FAvailableGameActions& Actions, float Countdown);
 
     // 隐藏动作提示
     UFUNCTION(BlueprintCallable, Category="Mahjong|Game")

@@ -13,21 +13,23 @@
 // 显示断线重连状态、进度、网络恢复等
 // 支持自动重连和手动重连
 //==============================================================================
+
+// 重连状态
+UENUM(BlueprintType)
+enum class EReconnectionState : uint8
+{
+    Disconnected,
+    Reconnecting,
+    Reconnected,
+    Failed
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UReconnectionWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 重连状态
-    UENUM(BlueprintType)
-    enum class EReconnectionState : uint8
-    {
-        Disconnected,
-        Reconnecting,
-        Reconnected,
-        Failed
-    };
 
     // 重连结果回调
     DECLARE_DELEGATE_OneParam(FOnReconnectionResult, bool)
@@ -122,7 +124,7 @@ protected:
 
     // 背景遮罩
     UPROPERTY(BlueprintReadOnly, meta=(BindWidget))
-    UImage* BackgroundOverlay;
+    UImage* ReconnectBackgroundOverlay;
 
     // 当前状态
     UPROPERTY()

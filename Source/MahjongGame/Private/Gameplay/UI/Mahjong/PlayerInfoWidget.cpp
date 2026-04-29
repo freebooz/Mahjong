@@ -13,7 +13,7 @@ void UPlayerInfoWidget::NativeConstruct()
     Super::NativeConstruct();
 }
 
-void UPlayerInfoWidget::SetPlayerInfo(const FPlayerInfo& Info)
+void UPlayerInfoWidget::SetPlayerInfo(const FPlayerInfoData& Info)
 {
     PlayerData = Info;
 
@@ -36,7 +36,7 @@ void UPlayerInfoWidget::SetPlayerInfo(const FPlayerInfo& Info)
         BankerIcon->SetVisibility(Info.bIsHost ? ESlateVisibility::Visible : ESlateVisibility::Collapsed);
 }
 
-FPlayerInfo UPlayerInfoWidget::GetPlayerInfo() const
+FPlayerInfoData UPlayerInfoWidget::GetPlayerInfo() const
 {
     return PlayerData;
 }

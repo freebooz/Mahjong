@@ -12,7 +12,7 @@
 #include "HttpModule.h"
 #include "Interfaces/IHttpRequest.h"
 #include "Interfaces/IHttpResponse.h"
-#include "PlatformProcess.h"
+#include "GenericPlatform/GenericPlatformProcess.h"
 
 //==============================================================================
 // 静态成员定义

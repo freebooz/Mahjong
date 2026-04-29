@@ -37,7 +37,7 @@ void UActionPromptWidget::NativeConstruct()
     HideActions();
 }
 
-void UActionPromptWidget::ShowActions(const FAvailableActions& Actions, float CountdownTime)
+void UActionPromptWidget::ShowActions(const FAvailableGameActions& Actions, float CountdownTime)
 {
     CurrentActions = Actions;
 

@@ -11,22 +11,23 @@
 // 用于显示短暂的操作反馈，如"操作成功"、"网络断开"等
 // 支持自动消失和手动关闭
 //==============================================================================
+
+// Toast 类型
+UENUM(BlueprintType)
+enum class EToastType : uint8
+{
+    Success,
+    Warning,
+    Error,
+    Info
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UToastWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // Toast 类型
-    UENUM(BlueprintType)
-    enum class EToastType : uint8
-    {
-        Success,
-        Warning,
-        Error,
-        Info
-    };
-
     // 构造函数
     UToastWidget(const FObjectInitializer& ObjectInitializer);
 

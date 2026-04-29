@@ -164,7 +164,7 @@ void UReconnectionWidget::SetReconnectionCallback(FOnReconnectionResult Callback
     ReconnectionCallback = Callback;
 }
 
-UReconnectionWidget::EReconnectionState UReconnectionWidget::GetCurrentState() const
+EReconnectionState UReconnectionWidget::GetCurrentState() const
 {
     return CurrentState;
 }

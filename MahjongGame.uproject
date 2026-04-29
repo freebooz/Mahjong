@@ -45,14 +45,13 @@
 			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "MahjongGameServer",
-			"Type": "Server",
-			"LoadingPhase": "Default",
-			"bUsesSteam": true
+			"Name": "MahjongGameEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
 		},
 		{
-			"Name": "MahjongGameAndroid",
-			"Type": "Game",
+			"Name": "MahjongGameServer",
+			"Type": "Server",
 			"LoadingPhase": "Default"
 		}
 	]

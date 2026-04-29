@@ -27,7 +27,6 @@ void ULoadingWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 
         if (LoadingIcon)
         {
-            FRotator Rotator = LoadingIcon->GetRenderTransformAngle();
             LoadingIcon->SetRenderTransformAngle(RotationAngle);
         }
     }

@@ -10,27 +10,29 @@
 // 在通用结算界面上添加贵阳麻将特有结算项
 // 特有：捉鸡奖励、夏麻计算、鸡麻将结算
 //==============================================================================
+
+// 贵阳麻将结算扩展数据
+USTRUCT(BlueprintType)
+struct FGuizhouSettlementData
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    int32 ChickenBonus;
+
+    UPROPERTY()
+    int32 XiaMaBonus;
+
+    UPROPERTY()
+    int32 TotalChickenCount;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UGuizhouSettlementWidget : public UGameSettlementWidget
 {
     GENERATED_BODY()
 
 public:
-    // 贵阳麻将结算扩展数据
-    USTRUCT(BlueprintType)
-    struct FGuizhouSettlementData
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        int32 ChickenBonus;
-
-        UPROPERTY()
-        int32 XiaMaBonus;
-
-        UPROPERTY()
-        int32 TotalChickenCount;
-    };
 
     // 构造函数
     UGuizhouSettlementWidget(const FObjectInitializer& ObjectInitializer);

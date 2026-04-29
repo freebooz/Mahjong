@@ -25,7 +25,7 @@ public:
 
     // 是否正在显示
     UFUNCTION(BlueprintCallable, Category="Common|Base")
-    bool IsVisible() const;
+    bool IsWidgetVisible() const;
 
     // 设置淡入淡出动画
     UFUNCTION(BlueprintCallable, Category="Common|Base")

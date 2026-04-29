@@ -12,66 +12,64 @@
 // 显示玩家头像、昵称、座位、分数、金币等信息
 // 支持四个方向的玩家位置显示
 //==============================================================================
+UENUM(BlueprintType)
+enum class EPlayerPosition : uint8
+{
+    Self,    // 自己（下）
+    Right,   // 右边（左）
+    Top,     // 对面（上）
+    Left     // 左边（右）
+};
+
+USTRUCT(BlueprintType)
+struct FPlayerInfoData
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    int32 PlayerID;
+
+    UPROPERTY()
+    FString Nickname;
+
+    UPROPERTY()
+    int32 PlayerLevel;
+
+    UPROPERTY()
+    FString AvatarURL;
+
+    UPROPERTY()
+    int32 Score;
+
+    UPROPERTY()
+    int32 TotalScore;
+
+    UPROPERTY()
+    bool bIsReady;
+
+    UPROPERTY()
+    bool bIsOnline;
+
+    UPROPERTY()
+    bool bIsHost;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API UPlayerInfoWidget : public UBaseWidget
 {
     GENERATED_BODY()
 
 public:
-    // 玩家位置
-    UENUM(BlueprintType)
-    enum class EPlayerPosition : uint8
-    {
-        Self,    // 自己（下）
-        Right,   // 右边（左）
-        Top,     // 对面（上）
-        Left     // 左边（右）
-    };
-
-    // 玩家数据
-    USTRUCT(BlueprintType)
-    struct FPlayerInfo
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        int32 PlayerID;
-
-        UPROPERTY()
-        FString Nickname;
-
-        UPROPERTY()
-        int32 PlayerLevel;
-
-        UPROPERTY()
-        FString AvatarURL;
-
-        UPROPERTY()
-        int32 Score;
-
-        UPROPERTY()
-        int32 TotalScore;
-
-        UPROPERTY()
-        bool bIsReady;
-
-        UPROPERTY()
-        bool bIsOnline;
-
-        UPROPERTY()
-        bool bIsHost;
-    };
-
     // 构造函数
     UPlayerInfoWidget(const FObjectInitializer& ObjectInitializer);
 
     // 设置玩家信息
     UFUNCTION(BlueprintCallable, Category="Mahjong|Player")
-    void SetPlayerInfo(const FPlayerInfo& Info);
+    void SetPlayerInfo(const FPlayerInfoData& Info);
 
     // 获取玩家信息
     UFUNCTION(BlueprintCallable, Category="Mahjong|Player")
-    FPlayerInfo GetPlayerInfo() const;
+    FPlayerInfoData GetPlayerInfo() const;
 
     // 设置玩家位置
     UFUNCTION(BlueprintCallable, Category="Mahjong|Player")
@@ -139,7 +137,7 @@ protected:
 
     // 当前玩家信息
     UPROPERTY()
-    FPlayerInfo PlayerData;
+    FPlayerInfoData PlayerData;
 
     // 当前位置
     UPROPERTY()

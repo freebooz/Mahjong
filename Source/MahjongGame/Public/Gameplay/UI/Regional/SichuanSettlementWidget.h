@@ -10,28 +10,27 @@
 // 在通用结算界面上添加四川麻将特有结算项
 // 特有：血战到底番数、刮风下雨奖励、叫牌奖励
 //==============================================================================
+USTRUCT(BlueprintType)
+struct FSichuanSettlementData
+{
+    GENERATED_BODY()
+
+    UPROPERTY()
+    int32 WindRainBonus;
+
+    UPROPERTY()
+    int32 BloodBattleMultiplier;
+
+    UPROPERTY()
+    int32 BaoJiaoBonus;
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API USichuanSettlementWidget : public UGameSettlementWidget
 {
     GENERATED_BODY()
 
 public:
-    // 四川麻将结算扩展数据
-    USTRUCT(BlueprintType)
-    struct FSichuanSettlementData
-    {
-        GENERATED_BODY()
-
-        UPROPERTY()
-        int32 WindRainBonus;
-
-        UPROPERTY()
-        int32 BloodBattleMultiplier;
-
-        UPROPERTY()
-        int32 BaoJiaoBonus;
-    };
-
     // 构造函数
     USichuanSettlementWidget(const FObjectInitializer& ObjectInitializer);
 

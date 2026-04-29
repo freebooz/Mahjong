@@ -11,32 +11,30 @@
 // 所有 UI 按钮的基类，自动播放点击音效
 // 支持普通按钮、图标按钮、文字按钮三种样式
 //==============================================================================
+UENUM(BlueprintType)
+enum class EButtonStyle : uint8
+{
+    Normal,     // 普通样式
+    Icon,       // 图标按钮
+    TextOnly    // 仅文字
+};
+
+UENUM(BlueprintType)
+enum class EButtonSoundType : uint8
+{
+    Standard,   // 标准点击
+    Confirm,    // 确认按钮
+    Cancel,     // 取消按钮
+    Success,    // 成功
+    Error       // 错误
+};
+
 UCLASS(Abstract, Blueprintable)
 class MAHJONGGAME_API USoundButton : public UUserWidget
 {
     GENERATED_BODY()
 
 public:
-    // 按钮样式
-    UENUM(BlueprintType)
-    enum class EButtonStyle : uint8
-    {
-        Normal,     // 普通样式
-        Icon,       // 图标按钮
-        TextOnly    // 仅文字
-    };
-
-    // 按钮类型（决定播放哪种音效）
-    UENUM(BlueprintType)
-    enum class EButtonSoundType : uint8
-    {
-        Standard,   // 标准点击
-        Confirm,    // 确认按钮
-        Cancel,     // 取消按钮
-        Success,    // 成功
-        Error       // 错误
-    };
-
     // 构造函数
     USoundButton(const FObjectInitializer& ObjectInitializer);
 
@@ -69,10 +67,12 @@ protected:
     virtual void NativeConstruct() override;
 
     // 鼠标悬停事件
-    virtual void NativeOnHovered() override;
+    UFUNCTION()
+    void NativeOnHovered();
 
     // 鼠标离开事件
-    virtual void NativeOnUnhovered() override;
+    UFUNCTION()
+    void NativeOnUnhovered();
 
     // 内部点击处理
     UFUNCTION(BlueprintCallable, Category="UI|Button")
