@@ -1,6 +1,6 @@
 #include "Gameplay/Actor/MahjongTableMesh.h"
 #include "Components/StaticMeshComponent.h"
-#include "UObject/ConstructorHelpers.h"
+
 AMahjongTableMesh::AMahjongTableMesh()
 {
     PrimaryActorTick.bCanEverTick = false;
@@ -14,28 +14,7 @@ AMahjongTableMesh::AMahjongTableMesh()
     TableLeg3Component->SetupAttachment(RootComponent);
     TableLeg4Component = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TableLeg4Component"));
     TableLeg4Component->SetupAttachment(RootComponent);
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> TableAsset(TEXT("/Engine/BasicShapes/Cube"));
-    if (TableAsset.Succeeded())
-    {
-        TableTopComponent->SetStaticMesh(TableAsset.Object);
-        TableTopComponent->SetWorldScale3D(FVector(4.0f, 4.0f, 0.3f));
-        TableTopComponent->SetWorldLocation(FVector(0, 0, 40.0f));
-        float LegScale = 0.3f;
-        float LegHeight = 1.5f;
-        float Offset = 1.5f;
-        TableLeg1Component->SetStaticMesh(TableAsset.Object);
-        TableLeg1Component->SetWorldScale3D(FVector(LegScale, LegScale, LegHeight));
-        TableLeg1Component->SetWorldLocation(FVector(-Offset, -Offset, 0));
-        TableLeg2Component->SetStaticMesh(TableAsset.Object);
-        TableLeg2Component->SetWorldScale3D(FVector(LegScale, LegScale, LegHeight));
-        TableLeg2Component->SetWorldLocation(FVector(Offset, -Offset, 0));
-        TableLeg3Component->SetStaticMesh(TableAsset.Object);
-        TableLeg3Component->SetWorldScale3D(FVector(LegScale, LegScale, LegHeight));
-        TableLeg3Component->SetWorldLocation(FVector(-Offset, Offset, 0));
-        TableLeg4Component->SetStaticMesh(TableAsset.Object);
-        TableLeg4Component->SetWorldScale3D(FVector(LegScale, LegScale, LegHeight));
-        TableLeg4Component->SetWorldLocation(FVector(Offset, Offset, 0));
-    }
+    // 注意：资产加载应在运行时或编辑器中设置
 }
 void AMahjongTableMesh::InitializeTable()
 {

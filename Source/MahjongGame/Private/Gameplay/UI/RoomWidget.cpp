@@ -2,7 +2,7 @@
 #include "Components/Button.h"
 #include "Components/Image.h"
 #include "Components/TextBlock.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 URoomWidget::URoomWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 void URoomWidget::NativeConstruct()

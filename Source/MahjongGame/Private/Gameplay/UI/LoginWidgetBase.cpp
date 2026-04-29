@@ -5,7 +5,7 @@
 #include "Components/CanvasPanel.h"
 #include "Components/ProgressBar.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Account/PlayerAccountService.h"
 #include "Account/SessionService.h"
 #include "Account/WeChatAuthService.h"

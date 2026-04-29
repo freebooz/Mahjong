@@ -1,6 +1,6 @@
 #include "Gameplay/Login/LoginGameMode.h"
 #include "Gameplay/UI/LoginWidget.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 #include "Blueprint/UserWidget.h"
 ALoginGameMode::ALoginGameMode()

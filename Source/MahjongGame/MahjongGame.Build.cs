@@ -82,5 +82,32 @@ public class MahjongGame : ModuleRules
 			// 禁用 RTTI（运行时类型信息）- 减小内存占用
 			bUseRTTI = false;
 		}
+
+		// ============ 全局构建设置 ============
+
+		// 使用最新构建设置版本
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
+
+		// ============ 平台特定优化 ============
+
+		// Apple 平台优化 (iOS/tvOS)
+		if (Target.Platform == UnrealTargetPlatform.IOS ||
+			Target.Platform == UnrealTargetPlatform.TVOS)
+		{
+			// iOS 特殊配置
+		}
+
+		// Android 平台优化
+		if (Target.Platform == UnrealTargetPlatform.Android)
+		{
+			// Android 特殊配置
+		}
+
+		// ============ 编辑器特定配置 ============
+
+		if (Target.Type == TargetType.Editor)
+		{
+			// 编辑器构建需要 Slate UI
+		}
 	}
 }

@@ -54,6 +54,9 @@ public:
     void OnTimeWarning(float RemainingSeconds);
 
 protected:
+    // 界面构建完成
+    virtual void NativeConstruct() override;
+
     // 每帧更新
     virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 

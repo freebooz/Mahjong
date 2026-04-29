@@ -2,7 +2,10 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MahjongTileActor.generated.h"
+
 class UStaticMeshComponent;
+class UMaterialInstance;
+
 UCLASS()
 class MAHJONGGAME_API AMahjongTileActor : public AActor
 {

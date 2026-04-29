@@ -1,4 +1,4 @@
-#include "Gameplay/UI/Regional/GuizhouSettlementWidget.h"
+#include "Variants/UI/Regional/GuizhouSettlementWidget.h"
 #include "Components/TextBlock.h"
 #include "Components/CanvasPanel.h"
 

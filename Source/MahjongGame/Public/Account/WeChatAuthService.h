@@ -152,7 +152,7 @@ protected:
     void RegisterSessionWithBackend(const FString& WeChatAccessToken, const FString& OpenID);
 
     // 解析后端会话响应
-    void ParseSessionResponse(const FString& ResponseContent);
+    void ParseSessionResponse(const FString& ResponseContent, FWeChatAuthCallback Callback);
 
     // HTTP响应处理
     void HandleBackendSessionResponse(TSharedPtr<IHttpRequest> Request, bool bSuccess);

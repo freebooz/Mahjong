@@ -10,6 +10,8 @@
 #include "HttpModule.h"
 #include "Interfaces/IHttpRequest.h"
 #include "Interfaces/IHttpResponse.h"
+#include "Engine/Engine.h"
+#include "Engine/World.h"
 
 UAITrainingDataService::UAITrainingDataService()
 {

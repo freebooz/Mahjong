@@ -6,7 +6,7 @@
 #include "Components/HorizontalBox.h"
 #include "Components/VerticalBox.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 
 //==============================================================================
 // 构造函数

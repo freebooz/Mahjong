@@ -1,6 +1,6 @@
 #include "Gameplay/Actor/MahjongTileMesh.h"
 #include "Components/StaticMeshComponent.h"
-#include "UObject/ConstructorHelpers.h"
+
 AMahjongTileMesh::AMahjongTileMesh()
 {
     PrimaryActorTick.bCanEverTick = false;
@@ -10,12 +10,7 @@ AMahjongTileMesh::AMahjongTileMesh()
     bIsSelected = false;
     TileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TileMeshComponent"));
     RootComponent = TileMeshComponent;
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> TileMeshAsset(TEXT("/Engine/BasicShapes/Cube"));
-    if (TileMeshAsset.Succeeded())
-    {
-        TileMeshComponent->SetStaticMesh(TileMeshAsset.Object);
-        TileMeshComponent->SetWorldScale3D(FVector(0.8f, 0.2f, 1.2f));
-    }
+    // 注意：资产加载应在运行时或编辑器中设置
 }
 void AMahjongTileMesh::InitializeTile(int32 InTileType, int32 InValue)
 {

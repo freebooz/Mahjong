@@ -28,6 +28,10 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Lobby Widget")
     void RefreshRoomList();
 
+    // 显示创建房间弹窗
+    UFUNCTION(BlueprintCallable, Category = "Lobby Widget")
+    void ShowCreateRoomPopup();
+
 protected:
     // 绑定的 UI 控件（需要在蓝图中设置）
     UPROPERTY(BlueprintReadOnly, meta = (BindWidget), Category = "Lobby Widget|UI")

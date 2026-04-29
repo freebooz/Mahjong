@@ -1,6 +1,7 @@
 ﻿#include "Gameplay/Lobby/MahjongLobbyPlayerController.h"
 #include "Gameplay/Lobby/MahjongLobbyGameState.h"
 #include "Core/PlayerState/AMahjongPlayerStateBase.h"
+#include "Engine/World.h"
 AMahjongLobbyPlayerController::AMahjongLobbyPlayerController() {}
 void AMahjongLobbyPlayerController::BeginPlay() { Super::BeginPlay(); UE_LOG(LogTemp, Log, TEXT("[CLIENT] LobbyPlayerController BeginPlay")); }
 void AMahjongLobbyPlayerController::Server_SetPlayerReady_Implementation(bool bReady)
@@ -22,3 +23,4 @@ void AMahjongLobbyPlayerController::Client_ShowNotification_Implementation(const
 void AMahjongLobbyPlayerController::Client_CloseLobby_Implementation() { UE_LOG(LogTemp, Log, TEXT("[CLIENT] Closing Lobby")); }
 void AMahjongLobbyPlayerController::ClientRequestRefreshRoomList_Implementation() { UE_LOG(LogTemp, Log, TEXT("[CLIENT] Requesting room list refresh")); }
 void AMahjongLobbyPlayerController::ClientRequestJoinRoom_Implementation(const FString& RoomID) { UE_LOG(LogTemp, Log, TEXT("[CLIENT] Requesting to join room: %s"), *RoomID); }
+void AMahjongLobbyPlayerController::ClientRequestCreateRoom_Implementation(const FString& RoomName, int32 MaxPlayers) { UE_LOG(LogTemp, Log, TEXT("[CLIENT] Requesting to create room: %s, max players: %d"), *RoomName, MaxPlayers); }

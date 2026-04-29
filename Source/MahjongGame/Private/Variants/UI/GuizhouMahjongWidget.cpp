@@ -1,4 +1,4 @@
-#include "Gameplay/UI/Regional/GuizhouMahjongWidget.h"
+#include "Variants/UI/Regional/GuizhouMahjongWidget.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "Components/CanvasPanel.h"

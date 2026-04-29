@@ -1,7 +1,7 @@
 #include "Gameplay/Login/LoginGameModeBase.h"
 #include "Gameplay/UI/LoginWidgetBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 
 ALoginGameModeBase::ALoginGameModeBase()
 {

@@ -6,7 +6,7 @@
 #include "Components/VerticalBox.h"
 #include "Components/ScrollBox.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 ULobbyWidgetBase::ULobbyWidgetBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 void ULobbyWidgetBase::NativeConstruct()
 {

@@ -18,6 +18,8 @@
 #include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "Misc/ScopeLock.h"
+#include "Engine/Engine.h"
+#include "Engine/World.h"
 
 //==============================================================================
 // 构造函数

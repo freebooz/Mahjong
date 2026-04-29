@@ -1,6 +1,6 @@
 #include "Gameplay/Login/LoginPlayerControllerBase.h"
 #include "Gameplay/UI/LoginWidgetBase.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 ALoginPlayerControllerBase::ALoginPlayerControllerBase()
 {

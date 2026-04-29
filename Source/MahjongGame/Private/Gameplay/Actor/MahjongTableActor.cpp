@@ -1,6 +1,7 @@
 #include "Gameplay/Actor/MahjongTableActor.h"
 #include "Net/UnrealNetwork.h"
 #include "Kismet/GameplayStatics.h"
+#include "Engine/World.h"
 
 AMahjongTableActor::AMahjongTableActor()
 {

@@ -5,7 +5,7 @@
 #include "Gameplay/Room/RoomGameModeBase.h"
 #include "Gameplay/UI/RoomWidgetBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 
 ARoomGameModeBase::ARoomGameModeBase()
 {

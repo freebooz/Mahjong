@@ -1,7 +1,7 @@
 #include "Gameplay/Actor/MahjongTileActor.h"
 #include "Components/StaticMeshComponent.h"
 #include "Materials/MaterialInstance.h"
-#include "UObject/ConstructorHelpers.h"
+
 AMahjongTileActor::AMahjongTileActor()
 {
     PrimaryActorTick.bCanEverTick = true;
@@ -12,21 +12,8 @@ AMahjongTileActor::AMahjongTileActor()
     bIsFaceUp = true;
     TileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("TileMesh"));
     RootComponent = TileMeshComponent;
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> TileMeshAsset(TEXT("/Game/Meshes/TileMesh"));
-    if (TileMeshAsset.Succeeded())
-        TileMeshComponent->SetStaticMesh(TileMeshAsset.Object);
-    static ConstructorHelpers::FObjectFinder<UMaterialInstance> NormalMat(TEXT("/Game/Materials/TileNormalMat"));
-    if (NormalMat.Succeeded())
-        NormalMaterial = NormalMat.Object;
-    static ConstructorHelpers::FObjectFinder<UMaterialInstance> HighlightMat(TEXT("/Game/Materials/TileHighlightMat"));
-    if (HighlightMat.Succeeded())
-        HighlightedMaterial = HighlightMat.Object;
-    static ConstructorHelpers::FObjectFinder<UMaterialInstance> SelectedMat(TEXT("/Game/Materials/TileSelectedMat"));
-    if (SelectedMat.Succeeded())
-        SelectedMaterial = SelectedMat.Object;
-    static ConstructorHelpers::FObjectFinder<UMaterialInstance> BackMat(TEXT("/Game/Materials/TileBackMat"));
-    if (BackMat.Succeeded())
-        BackMaterial = BackMat.Object;
+    // 注意：资产加载应在运行时通过 SetTileMesh 或编辑器中设置
+    // 这里不进行静态加载以兼容 UE5.7
 }
 void AMahjongTileActor::BeginPlay()
 {

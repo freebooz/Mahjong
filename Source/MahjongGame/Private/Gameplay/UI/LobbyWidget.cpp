@@ -2,7 +2,7 @@
 #include "Components/Button.h"
 #include "Components/ListView.h"
 #include "Components/TextBlock.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 ULobbyWidget::ULobbyWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 void ULobbyWidget::NativeConstruct()

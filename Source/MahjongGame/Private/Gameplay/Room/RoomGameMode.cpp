@@ -1,6 +1,6 @@
 #include "Gameplay/Room/RoomGameMode.h"
 #include "Gameplay/UI/RoomWidget.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 #include "Blueprint/UserWidget.h"
 ARoomGameMode::ARoomGameMode()

@@ -123,7 +123,7 @@ void UWeChatAuthService::LoginWithWeChat(FWeChatAuthCallback Callback)
     // 在编辑器环境下打开浏览器
 #if WITH_EDITOR
     UE_LOG(LogTemp, Log, TEXT("[WeChat] 正在打开微信授权页面..."));
-    FPlatformProcess::LaunchURL(*AuthURL);
+    FPlatformProcess::LaunchURL(*AuthURL, nullptr, nullptr);
 #endif
 
     UE_LOG(LogTemp, Log, TEXT("[WeChat] 授权URL已生成，请使用 CompleteLoginWithAuthCode() 完成登录"));
@@ -224,7 +224,7 @@ void UWeChatAuthService::CompleteLoginWithAuthCode(const FString& AuthCode, FWeC
 //==============================================================================
 // 解析后端会话响应
 //==============================================================================
-void UWeChatAuthService::ParseSessionResponse(const FString& ResponseContent, FWeChatAuthCallback& Callback)
+void UWeChatAuthService::ParseSessionResponse(const FString& ResponseContent, FWeChatAuthCallback Callback)
 {
     FWeChatAuthResult Result;
 
@@ -460,4 +460,10 @@ void UWeChatAuthService::RegisterSessionWithBackend(const FString& WeChatAccessT
 void UWeChatAuthService::HandleBackendSessionResponse(TSharedPtr<IHttpRequest> Request, bool bSuccess)
 {
     UE_LOG(LogTemp, Log, TEXT("[WeChat] HTTP响应处理（已由Lambda接管）"));
+}
+
+void UWeChatAuthService::SetBackendURL(const FString& URL)
+{
+    BackendAPIURL = URL;
+    UE_LOG(LogTemp, Log, TEXT("[WeChat] 后端API地址已设置为: %s"), *BackendAPIURL);
 }

@@ -14,6 +14,7 @@ public:
     UFUNCTION(Client, Reliable) void Client_CloseLobby();
     UFUNCTION(Client, Reliable) void ClientRequestRefreshRoomList();
     UFUNCTION(Client, Reliable) void ClientRequestJoinRoom(const FString& RoomID);
+    UFUNCTION(Server, Reliable) void ClientRequestCreateRoom(const FString& RoomName, int32 MaxPlayers);
 protected:
     virtual void BeginPlay() override;
 private:

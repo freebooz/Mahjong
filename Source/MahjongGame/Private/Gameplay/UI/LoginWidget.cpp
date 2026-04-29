@@ -4,7 +4,7 @@
 #include "Components/EditableTextBox.h"
 #include "Components/TextBlock.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 ULoginWidget::ULoginWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 void ULoginWidget::NativeConstruct()
 {

@@ -108,3 +108,9 @@ void UMahjongLobbyWidget::RefreshRoomList()
 
     UE_LOG(LogTemp, Log, TEXT("大厅Widget: 刷新房间列表，数量: %d"), RoomEntries.Num());
 }
+
+void UMahjongLobbyWidget::ShowCreateRoomPopup()
+{
+    UE_LOG(LogTemp, Log, TEXT("大厅Widget: 显示创建房间弹窗"));
+    OnCreateRoomButtonClicked();
+}

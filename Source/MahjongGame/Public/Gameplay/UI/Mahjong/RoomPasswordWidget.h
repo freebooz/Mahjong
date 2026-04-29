@@ -58,6 +58,28 @@ protected:
     UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
     void OnNumberClicked(int32 Number);
 
+    // 数字按钮 0-9 (供蓝图绑定)
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked0();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked1();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked2();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked3();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked4();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked5();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked6();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked7();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked8();
+    UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
+    void OnNumberClicked9();
+
     // 删除按钮
     UFUNCTION(BlueprintCallable, Category="Mahjong|Room")
     void OnDeleteClicked();

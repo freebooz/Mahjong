@@ -1,4 +1,4 @@
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 #include "Account/PlayerAccountService.h"
 #include "Network/NetworkManager.h"

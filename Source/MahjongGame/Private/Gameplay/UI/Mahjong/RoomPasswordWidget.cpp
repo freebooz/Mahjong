@@ -108,6 +108,17 @@ void URoomPasswordWidget::OnNumberClicked(int32 Number)
     }
 }
 
+void URoomPasswordWidget::OnNumberClicked0() { OnNumberClicked(0); }
+void URoomPasswordWidget::OnNumberClicked1() { OnNumberClicked(1); }
+void URoomPasswordWidget::OnNumberClicked2() { OnNumberClicked(2); }
+void URoomPasswordWidget::OnNumberClicked3() { OnNumberClicked(3); }
+void URoomPasswordWidget::OnNumberClicked4() { OnNumberClicked(4); }
+void URoomPasswordWidget::OnNumberClicked5() { OnNumberClicked(5); }
+void URoomPasswordWidget::OnNumberClicked6() { OnNumberClicked(6); }
+void URoomPasswordWidget::OnNumberClicked7() { OnNumberClicked(7); }
+void URoomPasswordWidget::OnNumberClicked8() { OnNumberClicked(8); }
+void URoomPasswordWidget::OnNumberClicked9() { OnNumberClicked(9); }
+
 void URoomPasswordWidget::OnDeleteClicked()
 {
     UUISoundManager::PlayButtonClick(this);

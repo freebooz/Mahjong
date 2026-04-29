@@ -7,7 +7,7 @@
 #include "Components/VerticalBox.h"
 #include "Components/ScrollBox.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 
 UGameWidgetBase::UGameWidgetBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 

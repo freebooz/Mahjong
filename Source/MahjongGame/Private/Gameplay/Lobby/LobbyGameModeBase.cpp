@@ -1,7 +1,7 @@
 #include "Gameplay/Lobby/LobbyGameModeBase.h"
 #include "Gameplay/UI/LobbyWidgetBase.h"
 #include "Kismet/GameplayStatics.h"
-#include "Core/MahjongGameInstance.h"
+#include "Gameplay/MahjongGameInstance.h"
 ALobbyGameModeBase::ALobbyGameModeBase()
 {
     LobbyWidgetClass = nullptr;
