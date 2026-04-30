@@ -65,7 +65,7 @@ void UMahjongGameWidget::UpdateHandTiles(const TArray<FMahjongTile>& Tiles)
 void UMahjongGameWidget::UpdateDiscardTiles()
 {
     if (DiscardTiles)
-        DiscardTiles->Refresh();
+        DiscardTiles->ClearAllDiscards();
     else
         UE_LOG(LogTemp, Warning, TEXT("[MahjongGameWidget] DiscardTiles is null"));
 }
