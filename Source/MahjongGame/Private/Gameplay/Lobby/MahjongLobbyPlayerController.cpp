@@ -6,12 +6,20 @@ AMahjongLobbyPlayerController::AMahjongLobbyPlayerController() {}
 void AMahjongLobbyPlayerController::BeginPlay() { Super::BeginPlay(); UE_LOG(LogTemp, Log, TEXT("[CLIENT] LobbyPlayerController BeginPlay")); }
 void AMahjongLobbyPlayerController::Server_SetPlayerReady_Implementation(bool bReady)
 {
+    if (!GetWorld())
+    {
+        return;
+    }
     if (AMahjongLobbyGameState* GS = Cast<AMahjongLobbyGameState>(GetWorld()->GetGameState()))
         GS->SetPlayerReady(this, bReady);
 }
 bool AMahjongLobbyPlayerController::Server_SetPlayerReady_Validate(bool bReady) { return true; }
 void AMahjongLobbyPlayerController::Server_RequestStartGame_Implementation()
 {
+    if (!GetWorld())
+    {
+        return;
+    }
     if (AMahjongLobbyGameState* GS = Cast<AMahjongLobbyGameState>(GetWorld()->GetGameState()))
         GS->TryStartGame(this);
 }

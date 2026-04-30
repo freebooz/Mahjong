@@ -35,7 +35,10 @@ void UToastWidget::ShowInfo(const FString& Message, float Duration)
 
 void UToastWidget::HideToast()
 {
-    GetWorld()->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+    if (UWorld* World = GetWorld())
+    {
+        World->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+    }
     Hide();
 }
 
@@ -68,8 +71,11 @@ void UToastWidget::ShowToast(const FString& Message, EToastType Type, float Dura
         }
     }
 
-    GetWorld()->GetTimerManager().ClearTimer(AutoHideTimerHandle);
-    GetWorld()->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UToastWidget::OnAutoHideTimer, Duration, false);
+    if (UWorld* World = GetWorld())
+    {
+        World->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+        World->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UToastWidget::OnAutoHideTimer, Duration, false);
+    }
 
     Show();
 }

@@ -13,6 +13,8 @@
 #include "Interfaces/IHttpRequest.h"
 #include "Interfaces/IHttpResponse.h"
 #include "GenericPlatform/GenericPlatformProcess.h"
+#include "Serialization/JsonReader.h"
+#include "Serialization/JsonSerializer.h"
 
 //==============================================================================
 // 静态成员定义
@@ -236,10 +238,22 @@ void UWeChatAuthService::ParseSessionResponse(const FString& ResponseContent, FW
         return;
     }
 
-    // 简单JSON解析（生产环境应使用 FJsonObject）
+    // 使用 TJsonObject 解析 JSON
+    TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(ResponseContent);
+    TSharedPtr<FJsonObject> JsonObject;
+    if (!FJsonSerializer::Deserialize(JsonReader, JsonObject) || !JsonObject.IsValid())
+    {
+        Result.bSuccess = false;
+        Result.ErrorMessage = TEXT("JSON解析失败");
+        Callback.ExecuteIfBound(Result);
+        return;
+    }
+
     // 检查成功标志
-    if (ResponseContent.Contains(TEXT("\"success\":true")) ||
-        ResponseContent.Contains(TEXT("\"session_token\":")))
+    bool bSuccess = false;
+    JsonObject->TryGetBoolField(TEXT("success"), bSuccess);
+
+    if (bSuccess || JsonObject->HasField(TEXT("session_token")))
     {
         FString SessionToken;
         FString RefreshToken;
@@ -247,37 +261,16 @@ void UWeChatAuthService::ParseSessionResponse(const FString& ResponseContent, FW
         int32 ExpiresIn = 7200;
 
         // 解析会话令牌
-        if (ResponseContent.Contains(TEXT("\"session_token\":\"")))
-        {
-            int32 TokenStart = ResponseContent.Find(TEXT("\"session_token\":\"")) + 16;
-            int32 TokenEnd = ResponseContent.Find(TEXT("\""), ESearchCase::IgnoreCase, ESearchDir::FromStart, TokenStart);
-            if (TokenStart > 16 && TokenEnd > TokenStart)
-            {
-                SessionToken = ResponseContent.Mid(TokenStart, TokenEnd - TokenStart);
-            }
-        }
+        JsonObject->TryGetStringField(TEXT("session_token"), SessionToken);
 
         // 解析刷新令牌
-        if (ResponseContent.Contains(TEXT("\"refresh_token\":\"")))
-        {
-            int32 TokenStart = ResponseContent.Find(TEXT("\"refresh_token\":\"")) + 15;
-            int32 TokenEnd = ResponseContent.Find(TEXT("\""), ESearchCase::IgnoreCase, ESearchDir::FromStart, TokenStart);
-            if (TokenStart > 15 && TokenEnd > TokenStart)
-            {
-                RefreshToken = ResponseContent.Mid(TokenStart, TokenEnd - TokenStart);
-            }
-        }
+        JsonObject->TryGetStringField(TEXT("refresh_token"), RefreshToken);
 
         // 解析OpenID
-        if (ResponseContent.Contains(TEXT("\"openid\":\"")))
-        {
-            int32 IDStart = ResponseContent.Find(TEXT("\"openid\":\"")) + 10;
-            int32 IDEnd = ResponseContent.Find(TEXT("\""), ESearchCase::IgnoreCase, ESearchDir::FromStart, IDStart);
-            if (IDStart > 10 && IDEnd > IDStart)
-            {
-                OpenID = ResponseContent.Mid(IDStart, IDEnd - IDStart);
-            }
-        }
+        JsonObject->TryGetStringField(TEXT("openid"), OpenID);
+
+        // 解析过期时间
+        JsonObject->TryGetNumberField(TEXT("expires_in"), ExpiresIn);
 
         if (!SessionToken.IsEmpty())
         {
@@ -359,15 +352,15 @@ void UWeChatAuthService::RefreshSession(FWeChatTokenCallback Callback)
             {
                 FString Content = Resp->GetContentAsString();
 
-                // 解析新的会话令牌
-                if (Content.Contains(TEXT("\"session_token\":\"")))
+                // 使用 TJsonObject 解析 JSON
+                TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(Content);
+                TSharedPtr<FJsonObject> JsonObject;
+                if (FJsonSerializer::Deserialize(JsonReader, JsonObject) && JsonObject.IsValid())
                 {
-                    int32 TokenStart = Content.Find(TEXT("\"session_token\":\"")) + 16;
-                    int32 TokenEnd = Content.Find(TEXT("\""), ESearchCase::IgnoreCase, ESearchDir::FromStart, TokenStart);
-                    if (TokenStart > 16 && TokenEnd > TokenStart)
-                    {
-                        NewToken = Content.Mid(TokenStart, TokenEnd - TokenStart);
+                    JsonObject->TryGetStringField(TEXT("session_token"), NewToken);
 
+                    if (!NewToken.IsEmpty())
+                    {
                         // 更新当前会话
                         This->CurrentSession.SessionToken = NewToken;
                         This->CurrentSession.ExpiresAt = FDateTime::Now().ToUnixTimestamp() + 7200;

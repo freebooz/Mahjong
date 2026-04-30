@@ -43,8 +43,11 @@ void UErrorMessageWidget::ShowError(const FString& ErrorMessage, float Duration)
 
     if (Duration > 0)
     {
-        GetWorld()->GetTimerManager().ClearTimer(AutoHideTimerHandle);
-        GetWorld()->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UErrorMessageWidget::HideError, Duration, false);
+        if (UWorld* World = GetWorld())
+        {
+            World->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+            World->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UErrorMessageWidget::HideError, Duration, false);
+        }
     }
 
     if (RootCanvas)
@@ -71,8 +74,11 @@ void UErrorMessageWidget::ShowWarning(const FString& WarningMessage, float Durat
 
     if (Duration > 0)
     {
-        GetWorld()->GetTimerManager().ClearTimer(AutoHideTimerHandle);
-        GetWorld()->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UErrorMessageWidget::HideError, Duration, false);
+        if (UWorld* World = GetWorld())
+        {
+            World->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+            World->GetTimerManager().SetTimer(AutoHideTimerHandle, this, &UErrorMessageWidget::HideError, Duration, false);
+        }
     }
 
     if (RootCanvas)
@@ -104,7 +110,10 @@ void UErrorMessageWidget::ShowValidationError(const FString& FieldName, const FS
 //==============================================================================
 void UErrorMessageWidget::HideError()
 {
-    GetWorld()->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+    if (UWorld* World = GetWorld())
+    {
+        World->GetTimerManager().ClearTimer(AutoHideTimerHandle);
+    }
 
     if (RootCanvas)
         RootCanvas->SetVisibility(ESlateVisibility::Collapsed);

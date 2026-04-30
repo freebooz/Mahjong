@@ -18,6 +18,8 @@
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
 #include "HAL/PlatformFile.h"
+#include "Serialization/JsonReader.h"
+#include "Serialization/JsonSerializer.h"
 
 //==============================================================================
 // 构造函数
@@ -376,61 +378,28 @@ void USessionService::ParseSessionResponse(const FString& ResponseContent)
         return;
     }
 
-    // 简单 JSON 解析（生产环境应使用 FJsonObject）
+    // 使用 TJsonObject 解析 JSON
+    TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(ResponseContent);
+    TSharedPtr<FJsonObject> JsonObject;
+    if (!FJsonSerializer::Deserialize(JsonReader, JsonObject) || !JsonObject.IsValid())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[Session] JSON解析失败"));
+        return;
+    }
 
     // 解析 Nickname
-    if (ResponseContent.Contains(TEXT("\"nickname\":")))
-    {
-        int32 Start = ResponseContent.Find(TEXT("\"nickname\":\"")) + 12;
-        int32 End = ResponseContent.Find(TEXT("\""), ESearchCase::IgnoreCase, ESearchDir::FromStart, Start);
-        if (Start > 12 && End > Start)
-        {
-            CurrentSession.Nickname = ResponseContent.Mid(Start, End - Start);
-        }
-    }
+    JsonObject->TryGetStringField(TEXT("nickname"), CurrentSession.Nickname);
 
     // 解析 PlayerLevel
-    if (ResponseContent.Contains(TEXT("\"player_level\":")))
-    {
-        int32 Start = ResponseContent.Find(TEXT("\"player_level\":")) + 15;
-        FString LevelStr;
-        int32 End = Start;
-        while (End < ResponseContent.Len() && FChar::IsDigit(ResponseContent[End]))
-        {
-            End++;
-        }
-        if (End > Start)
-        {
-            LevelStr = ResponseContent.Mid(Start, End - Start);
-            CurrentSession.PlayerLevel = FCString::Atoi(*LevelStr);
-        }
-    }
+    JsonObject->TryGetNumberField(TEXT("player_level"), CurrentSession.PlayerLevel);
 
     // 解析 SessionToken（可能更新）
-    if (ResponseContent.Contains(TEXT("\"session_token\":")))
-    {
-        int32 Start = ResponseContent.Find(TEXT("\"session_token\":\"")) + 16;
-        int32 End = ResponseContent.Find(TEXT("\""), ESearchCase::IgnoreCase, ESearchDir::FromStart, Start);
-        if (Start > 16 && End > Start)
-        {
-            CurrentSession.SessionToken = ResponseContent.Mid(Start, End - Start);
-        }
-    }
+    JsonObject->TryGetStringField(TEXT("session_token"), CurrentSession.SessionToken);
 
     // 解析 ExpiresAt
-    if (ResponseContent.Contains(TEXT("\"expires_at\":")))
+    int64 ExpiresAt = 0;
+    if (JsonObject->TryGetNumberField(TEXT("expires_at"), ExpiresAt))
     {
-        int32 Start = ResponseContent.Find(TEXT("\"expires_at\":")) + 13;
-        FString TimeStr;
-        int32 End = Start;
-        while (End < ResponseContent.Len() && FChar::IsDigit(ResponseContent[End]))
-        {
-            End++;
-        }
-        if (End > Start)
-        {
-            TimeStr = ResponseContent.Mid(Start, End - Start);
-            CurrentSession.ExpiresAt = FCString::Atoi64(*TimeStr);
-        }
+        CurrentSession.ExpiresAt = ExpiresAt;
     }
 }

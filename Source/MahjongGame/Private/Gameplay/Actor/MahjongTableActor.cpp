@@ -70,11 +70,17 @@ void AMahjongTableActor::SetupMahjongTable()
 
 void AMahjongTableActor::CreateWall(int32 WallIndex)
 {
+	UWorld* World = GetWorld();
+	if (!World)
+	{
+		return;
+	}
+
 	for (int32 TileIndex = 0; TileIndex < TilesPerWallSide; TileIndex++)
 	{
 		// 底层牌
 		FVector BottomLocation = CalculateTilePosition(WallIndex, TileIndex, false);
-		AActor* BottomTile = GetWorld()->SpawnActor<AActor>(BottomLocation, FRotator::ZeroRotator);
+		AActor* BottomTile = World->SpawnActor<AActor>(BottomLocation, FRotator::ZeroRotator);
 		if (BottomTile)
 		{
 			BottomTile->SetReplicates(true);
@@ -83,7 +89,7 @@ void AMahjongTableActor::CreateWall(int32 WallIndex)
 
 		// 上层牌
 		FVector TopLocation = CalculateTilePosition(WallIndex, TileIndex, true);
-		AActor* TopTile = GetWorld()->SpawnActor<AActor>(TopLocation, FRotator::ZeroRotator);
+		AActor* TopTile = World->SpawnActor<AActor>(TopLocation, FRotator::ZeroRotator);
 		if (TopTile)
 		{
 			TopTile->SetReplicates(true);
