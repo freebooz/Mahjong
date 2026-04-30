@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Gameplay/UI/Common/BaseWidget.h"
+#include "Core/UI/Common/BaseWidget.h"
 #include "Components/Image.h"
 #include "Components/Button.h"
 #include "MahjongTileWidget.generated.h"

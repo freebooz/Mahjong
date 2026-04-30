@@ -3,7 +3,7 @@
 #include "Components/TextBlock.h"
 #include "Components/CanvasPanel.h"
 #include "Components/HorizontalBox.h"
-#include "Gameplay/UI/Common/UISoundManager.h"
+#include "Core/UI/Common/UISoundManager.h"
 
 UActionPromptWidget::UActionPromptWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {

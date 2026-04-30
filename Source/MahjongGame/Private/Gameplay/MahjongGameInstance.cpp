@@ -1,7 +1,7 @@
 #include "Gameplay/MahjongGameInstance.h"
 #include "Kismet/GameplayStatics.h"
-#include "Account/PlayerAccountService.h"
-#include "Network/NetworkManager.h"
+#include "Gameplay/Account/PlayerAccountService.h"
+#include "Gameplay/Network/NetworkManager.h"
 UMahjongGameInstance::UMahjongGameInstance()
 {
     PlayerName = TEXT("Player");

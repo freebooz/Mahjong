@@ -4,7 +4,7 @@
 #include "Gameplay/Modes/AMahjongGameMode.h"
 #include "Kismet/GameplayStatics.h"
 #include "Net/UnrealNetwork.h"
-#include "Monitor/RedisMonitorBackend.h"
+#include "Gameplay/Monitor/RedisMonitorBackend.h"
 
 AMahjongLobbyGameState::AMahjongLobbyGameState()
 {

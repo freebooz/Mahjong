@@ -5,7 +5,7 @@
 #include "Components/Image.h"
 #include "Components/Button.h"
 #include "Kismet/GameplayStatics.h"
-#include "Gameplay/UI/Common/UISoundManager.h"
+#include "Core/UI/Common/UISoundManager.h"
 
 UReconnectionWidget::UReconnectionWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {

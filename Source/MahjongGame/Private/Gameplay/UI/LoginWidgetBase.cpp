@@ -6,10 +6,10 @@
 #include "Components/ProgressBar.h"
 #include "Kismet/GameplayStatics.h"
 #include "Gameplay/MahjongGameInstance.h"
-#include "Account/PlayerAccountService.h"
-#include "Account/SessionService.h"
-#include "Account/WeChatAuthService.h"
-#include "Network/NetworkManager.h"
+#include "Gameplay/Account/PlayerAccountService.h"
+#include "Gameplay/Account/SessionService.h"
+#include "Gameplay/Account/WeChatAuthService.h"
+#include "Gameplay/Network/NetworkManager.h"
 
 ULoginWidgetBase::ULoginWidgetBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 

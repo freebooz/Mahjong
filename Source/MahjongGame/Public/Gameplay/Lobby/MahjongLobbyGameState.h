@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/GameStateBase.h"
-#include "Monitor/MonitorManager.h"
+#include "Gameplay/Monitor/MonitorManager.h"
 #include "MahjongLobbyGameState.generated.h"
 UCLASS()
 class MAHJONGGAME_API AMahjongLobbyGameState : public AGameStateBase

@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Gameplay/UI/Common/BaseWidget.h"
+#include "Core/UI/Common/BaseWidget.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
 #include "Components/VerticalBox.h"

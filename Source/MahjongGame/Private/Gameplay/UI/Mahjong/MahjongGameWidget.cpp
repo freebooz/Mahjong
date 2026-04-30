@@ -4,7 +4,7 @@
 #include "Components/Button.h"
 #include "Components/Image.h"
 #include "Kismet/GameplayStatics.h"
-#include "Gameplay/UI/Common/UISoundManager.h"
+#include "Core/UI/Common/UISoundManager.h"
 
 UMahjongGameWidget::UMahjongGameWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {

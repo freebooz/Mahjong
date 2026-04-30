@@ -3,7 +3,7 @@
 #include "Components/TextBlock.h"
 #include "Components/EditableTextBox.h"
 #include "Components/CanvasPanel.h"
-#include "Gameplay/UI/Common/UISoundManager.h"
+#include "Core/UI/Common/UISoundManager.h"
 
 URoomPasswordWidget::URoomPasswordWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {

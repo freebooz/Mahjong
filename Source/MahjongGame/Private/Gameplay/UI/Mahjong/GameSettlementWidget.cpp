@@ -4,7 +4,7 @@
 #include "Components/VerticalBox.h"
 #include "Components/CanvasPanel.h"
 #include "Kismet/GameplayStatics.h"
-#include "Gameplay/UI/Common/UISoundManager.h"
+#include "Core/UI/Common/UISoundManager.h"
 
 UGameSettlementWidget::UGameSettlementWidget(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
 {

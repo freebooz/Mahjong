@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
 #include "UObject/NoExportTypes.h"
-#include "Account/PlayerAccountService.h"
-#include "Network/NetworkManager.h"
+#include "Gameplay/Account/PlayerAccountService.h"
+#include "Gameplay/Network/NetworkManager.h"
 #include "MahjongGameInstance.generated.h"
 UCLASS(Blueprintable)
 class MAHJONGGAME_API UMahjongGameInstance : public UGameInstance
