@@ -104,8 +104,15 @@ void AMahjongLobbyHUD::InitializeLobbyUI()
     // 检查是否已经创建过窗口实例（防止重复创建）
     if (LobbyWidgetClass && !LobbyWidgetInstance)
     {
+        UWorld* World = GetWorld();
+        if (!World)
+        {
+            UE_LOG(LogTemp, Error, TEXT("[MahjongLobbyHUD] GetWorld() returned null"));
+            return;
+        }
+
         // 创建大厅窗口实例
-        LobbyWidgetInstance = CreateWidget<UMahjongLobbyWidget>(GetWorld(), LobbyWidgetClass);
+        LobbyWidgetInstance = CreateWidget<UMahjongLobbyWidget>(World, LobbyWidgetClass);
 
         if (LobbyWidgetInstance)
         {

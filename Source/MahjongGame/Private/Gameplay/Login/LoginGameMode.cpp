@@ -21,9 +21,17 @@ void ALoginGameMode::ShowLoginUI()
         LoginWidgetInstance->RemoveFromParent();
         LoginWidgetInstance = nullptr;
     }
+
+    UWorld* World = GetWorld();
+    if (!World)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[LoginGameMode] GetWorld() returned null"));
+        return;
+    }
+
     if (LoginWidgetClass)
     {
-        LoginWidgetInstance = CreateWidget<ULoginWidget>(GetWorld(), LoginWidgetClass);
+        LoginWidgetInstance = CreateWidget<ULoginWidget>(World, LoginWidgetClass);
         if (LoginWidgetInstance)
         {
             LoginWidgetInstance->AddToViewport();

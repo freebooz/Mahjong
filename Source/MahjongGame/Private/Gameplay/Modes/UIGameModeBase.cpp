@@ -18,9 +18,16 @@ void AUIGameModeBase::ShowUIWidget(
         WidgetInstance = nullptr;
     }
 
+    UWorld* World = GetWorld();
+    if (!World)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[%s] GetWorld() returned null"), *LogPrefix);
+        return;
+    }
+
     if (WidgetClass)
     {
-        WidgetInstance = CreateWidget<UUserWidget>(GetWorld(), WidgetClass);
+        WidgetInstance = CreateWidget<UUserWidget>(World, WidgetClass);
         if (WidgetInstance)
         {
             WidgetInstance->AddToViewport();

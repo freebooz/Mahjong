@@ -21,9 +21,17 @@ void ALobbyGameModeBase::ShowLobbyUI()
         LobbyWidgetInstance->RemoveFromParent();
         LobbyWidgetInstance = nullptr;
     }
+
+    UWorld* World = GetWorld();
+    if (!World)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[LobbyGameModeBase] GetWorld() returned null"));
+        return;
+    }
+
     if (LobbyWidgetClass)
     {
-        LobbyWidgetInstance = CreateWidget<ULobbyWidgetBase>(GetWorld(), LobbyWidgetClass);
+        LobbyWidgetInstance = CreateWidget<ULobbyWidgetBase>(World, LobbyWidgetClass);
         if (LobbyWidgetInstance)
         {
             LobbyWidgetInstance->AddToViewport();

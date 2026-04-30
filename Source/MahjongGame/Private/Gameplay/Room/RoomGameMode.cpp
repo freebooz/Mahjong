@@ -22,9 +22,17 @@ void ARoomGameMode::ShowRoomUI()
         RoomWidgetInstance->RemoveFromParent();
         RoomWidgetInstance = nullptr;
     }
+
+    UWorld* World = GetWorld();
+    if (!World)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[RoomGameMode] GetWorld() returned null"));
+        return;
+    }
+
     if (RoomWidgetClass)
     {
-        RoomWidgetInstance = CreateWidget<URoomWidget>(GetWorld(), RoomWidgetClass);
+        RoomWidgetInstance = CreateWidget<URoomWidget>(World, RoomWidgetClass);
         if (RoomWidgetInstance)
         {
             RoomWidgetInstance->AddToViewport();
